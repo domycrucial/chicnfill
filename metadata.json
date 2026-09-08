@@ -1,0 +1,6 @@
+{
+  "name": "CHIC-N-FILL",
+  "description": "CHIC-N-FILL fried chicken and pizza restaurant on Pangani St, Arusha CBD, Tanzania. Crispy classics, stone-baked pizza, signature combo packages, dine-in, takeaway, and delivery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
