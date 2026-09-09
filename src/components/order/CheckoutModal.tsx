@@ -54,7 +54,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
       newErrors.customerName = 'Please enter your full name';
     }
     if (!phone.trim() || phone.trim().length < 9) {
-      newErrors.phone = 'Please enter a valid phone number (e.g., 0748 159 774)';
+      newErrors.phone = 'Please enter a valid phone number (e.g., 0659 263 416)';
     }
     if (orderType === 'delivery' && !deliveryAddress.trim()) {
       newErrors.deliveryAddress = 'Please enter your delivery street or area in Arusha';
@@ -193,7 +193,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
                   required
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
-                  placeholder="e.g., 0748 159 774"
+                  placeholder="e.g., 0659 263 416"
                   className="w-full px-3.5 py-2.5 rounded-xl bg-[#222222] border border-[#333333] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B400]"
                 />
                 {errors.phone && (

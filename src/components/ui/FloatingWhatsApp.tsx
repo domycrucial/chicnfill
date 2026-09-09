@@ -13,7 +13,7 @@ export const FloatingWhatsApp: React.FC = () => {
       {/* Tooltip on desktop */}
       {showTooltip && (
         <div className="hidden sm:flex items-center gap-2 bg-[#1A1A1A] border border-[#333333] text-white text-xs px-3.5 py-2 rounded-2xl shadow-xl backdrop-blur-md animate-in fade-in slide-in-from-right-2">
-          <span>Order or Chat via WhatsApp?</span>
+          <span>Order via WhatsApp: <strong>0659 263 416</strong></span>
           <button
             onClick={() => setShowTooltip(false)}
             className="text-neutral-400 hover:text-white ml-1 p-0.5"

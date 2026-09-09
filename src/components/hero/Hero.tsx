@@ -66,7 +66,7 @@ export const Hero: React.FC = () => {
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-bold bg-[#25D366]/15 hover:bg-[#25D366]/25 text-[#25D366] border border-[#25D366]/30 transition-all"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>WhatsApp Order</span>
+                <span>WhatsApp: {restaurantConfig.phoneDisplay}</span>
               </a>
             </div>
 

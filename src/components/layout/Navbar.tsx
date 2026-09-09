@@ -79,10 +79,10 @@ export const Navbar: React.FC<NavbarProps> = () => {
               href={`tel:${restaurantConfig.phoneRaw}`}
               id="navbar-call-btn"
               className="hidden sm:inline-flex h-10 items-center gap-1.5 px-3.5 rounded-xl text-xs sm:text-sm font-bold bg-[#1C1C1C] text-neutral-200 hover:text-white hover:bg-[#262626] border border-[#333333] transition-all leading-none"
-              aria-label="Call CHIC-N-FILL"
+              aria-label="Call CHIC-N-FILL on 0659 263 416"
             >
               <Phone className="w-3.5 h-3.5 text-[#F4B41A]" />
-              <span>Call</span>
+              <span>{restaurantConfig.phoneDisplay}</span>
             </a>
 
             {/* Cart Button */}
@@ -185,7 +185,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
                 className="w-full flex items-center justify-center gap-2 py-3 rounded-xl text-sm font-bold bg-[#25D366]/15 text-[#25D366] border border-[#25D366]/30"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>Order via WhatsApp</span>
+                <span>WhatsApp: {restaurantConfig.phoneDisplay}</span>
               </a>
 
               <a
