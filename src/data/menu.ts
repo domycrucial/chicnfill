@@ -124,7 +124,7 @@ export const menuItems: MenuItem[] = [
     description:
       'Game day & celebration special: 20 pcs assorted crispy wings (10 Soy Garlic + 10 Fiery Arusha Crunch) with a Large Loaded Cheese & Pepperoni Pizza and trio sauces.',
     image:
-      'https://images.unsplash.com/photo-1527477321055-436158a257a5?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&fit=crop',
     portionSize: 'Serves 4–6 People',
     prepTimeMinutes: 25,
     packageIncludes: [
