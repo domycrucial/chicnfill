@@ -311,7 +311,7 @@ export const menuItems: MenuItem[] = [
     description:
       'Crispy on the outside, fluffy inside, salted with our signature seasoning blend.',
     image:
-      'https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=1000&q=80',
+      'https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=800&q=80&fit=crop',
     portionSize: 'Regular Box',
     prepTimeMinutes: 6,
     availableOptions: [
@@ -346,7 +346,7 @@ export const menuItems: MenuItem[] = [
     description:
       'Thick sweet white onion rings dipped in seasoned batter and fried until golden and shatteringly crunchy.',
     image:
-      'https://images.unsplash.com/photo-1639024471287-032f66e55c3c?auto=format&fit=crop&w=1000&q=80',
+      'https://plus.unsplash.com/premium_photo-1701013639121-db90aefda5f2?q=80&w=800&auto=format&fit=crop',
     portionSize: '10 pcs Ring Box',
     prepTimeMinutes: 8,
   },
@@ -437,7 +437,7 @@ export const menuItems: MenuItem[] = [
     price: 1500,
     description: 'Chilled Kilimanjaro purified mineral drinking water.',
     image:
-      'https://images.unsplash.com/photo-1548839140-29a749e1bc4e?auto=format&fit=crop&w=600&q=80',
+      'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=800&q=80',
     portionSize: '500ml Bottle',
     prepTimeMinutes: 1,
   },

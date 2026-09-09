@@ -19,7 +19,7 @@ export const SocialSection: React.FC = () => {
     },
     {
       id: 'soc-3',
-      image: 'https://images.unsplash.com/photo-1576107232684-1279f3908594?auto=format&fit=crop&w=600&q=80',
+      image: 'https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=800&q=80&fit=crop',
       caption: 'Piping hot golden french fries tossed in peri-peri spice 🍟',
       likes: '312',
     },
