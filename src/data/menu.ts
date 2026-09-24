@@ -21,7 +21,7 @@ export const menuItems: MenuItem[] = [
       'Ndizi Mzuzu (Golden Fried Sweet Plantains)',
       'Chips Plain & Chips Masala',
       'Kuku Makange (Sizzling Spiced Chicken)',
-      'Wali Mweupe (White Rice) & Spiced Pilau',
+      'Wali Mweupe (Steamed Rice) & Spiced Pilau',
       'Grilled Beef Sausage Slices',
       'Fresh Crisp Kachumbari Salad',
       'Trio of House Dipping Sauces',
@@ -47,7 +47,7 @@ export const menuItems: MenuItem[] = [
     category: 'chicken',
     price: 10000,
     isPopular: true,
-    description: '4 pieces of Chickens and Fries. Crispy, hot, and freshly fried to order.',
+    description: '4 pieces of Chickens and Fries. Golden crunchy chicken freshly fried with crisp seasoned fries.',
     image: '/images/chicnfill-single.jpg',
     pieceCount: 4,
     portionSize: 'Single Meal (4 Pcs + Fries)',
@@ -144,8 +144,8 @@ export const menuItems: MenuItem[] = [
     price: 16000,
     isPopular: true,
     description:
-      'With regular fries and the choice of your favourite souce. Tender crispy chicken breast in a toasted gourmet bun with crisp pickles and lettuce.',
-    image: '/images/chicnfill-sandwich.jpg',
+      'With regular fries and the choice of your favourite souce. Crispy golden chicken breast fillet in toasted bun with fresh lettuce, pickles, and hot fries.',
+    image: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1200&auto=format&fit=crop&q=85',
     portionSize: 'Burger + Regular Fries',
     prepTimeMinutes: 10,
     availableOptions: [
@@ -167,8 +167,8 @@ export const menuItems: MenuItem[] = [
     price: 25000,
     isPopular: true,
     description:
-      'With regular fries and drinks of 400mls. Double loaded crispy chicken fillet sandwich stacked with melted cheese, fresh salad, fries, and cold drink.',
-    image: '/images/chicnfill-big-sandwich.jpg',
+      'With regular fries and drinks of 400mls. Double-stacked crispy chicken fillets with melted cheddar, crisp salad, golden fries, and ice-cold 400ml drink.',
+    image: 'https://images.unsplash.com/photo-1625813506062-0aeb1d7a094b?w=1200&auto=format&fit=crop&q=85',
     portionSize: 'Big Sandwich + Fries + 400ml Drink',
     prepTimeMinutes: 14,
     packageIncludes: [
@@ -208,7 +208,7 @@ export const menuItems: MenuItem[] = [
     isPopular: true,
     description:
       '10 pieces of seasoned juicy chicken drumsticks fried to deep-golden crunch, served with dipping sauces.',
-    image: '/images/chicnfill-drumsticks.jpg',
+    image: 'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?w=1200&auto=format&fit=crop&q=85',
     pieceCount: 10,
     portionSize: '10 Pcs Drumsticks Box',
     prepTimeMinutes: 15,
@@ -231,7 +231,7 @@ export const menuItems: MenuItem[] = [
     isPopular: false,
     description:
       'Every Tuesday offer 4pcs Drumstick With regular fries Pick your favourite souce.',
-    image: '/images/chicnfill-drumsticks-platter.jpg',
+    image: 'https://images.unsplash.com/photo-1562967914-608f82629710?w=1200&auto=format&fit=crop&q=85',
     pieceCount: 4,
     portionSize: '4 Drumsticks + Regular Fries',
     prepTimeMinutes: 12,
@@ -269,7 +269,7 @@ export const menuItems: MenuItem[] = [
     price: 5000,
     isPopular: true,
     description: 'With any favourite mayonnaise ketchup. Generous boat-style basket of hot crisp fries.',
-    image: '/images/chicnfill-boat-fries.jpg',
+    image: 'https://images.unsplash.com/photo-1585109649139-366815a0d713?w=1200&auto=format&fit=crop&q=85',
     portionSize: 'Loaded Boat Box',
     prepTimeMinutes: 7,
     availableOptions: [
@@ -295,7 +295,7 @@ export const menuItems: MenuItem[] = [
     isPopular: true,
     description:
       '12 inches pizza ideal for 2-3 people. Fresh stone-oven baked crust layered with savory seasoned ground beef mince, melted mozzarella cheese, fresh bell peppers, and herbs.',
-    image: '/images/chicnfill-mince-pizza.jpg',
+    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200&auto=format&fit=crop&q=85',
     portionSize: '12 Inches (Feeds 2–3 People)',
     prepTimeMinutes: 18,
     availableOptions: [
@@ -327,7 +327,7 @@ export const menuItems: MenuItem[] = [
     isPopular: true,
     description:
       'Aromatic spiced basmati rice infused with cardamom and cloves, served with a tender chicken piece and rich Swahili curry sauce.',
-    image: '/images/chicnfill-biryani.jpg',
+    image: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?w=1200&auto=format&fit=crop&q=85',
     portionSize: 'Standard Plate',
     prepTimeMinutes: 8,
   },
@@ -339,7 +339,7 @@ export const menuItems: MenuItem[] = [
     isPopular: false,
     description:
       'Flavorful, rich spiced basmati rice served with slow-braised tender beef cubes in aromatic masala gravy.',
-    image: '/images/chicnfill-biryani.jpg',
+    image: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=1200&auto=format&fit=crop&q=85',
     portionSize: 'Standard Plate',
     prepTimeMinutes: 8,
   },
@@ -351,7 +351,7 @@ export const menuItems: MenuItem[] = [
     isPopular: true,
     description:
       'This Biryani is ideal for someone who wants bigger piece of chicken and more Biryani rice.',
-    image: '/images/chicnfill-biryani.jpg',
+    image: 'https://images.unsplash.com/photo-1633945274405-b6c8069047b0?w=1200&auto=format&fit=crop&q=85',
     portionSize: 'Large Plate (Half Chicken)',
     prepTimeMinutes: 10,
   },
@@ -363,7 +363,7 @@ export const menuItems: MenuItem[] = [
     isPopular: true,
     description:
       'This plate is ideal for two people who wants to share a plate together (Friends or Couple). Juice not part of the Menu.',
-    image: '/images/chicnfill-biryani.jpg',
+    image: 'https://images.unsplash.com/photo-1596797038530-2c107229654b?w=1200&auto=format&fit=crop&q=85',
     portionSize: 'Sharing Plate for 2 Diners',
     prepTimeMinutes: 15,
   },
@@ -388,7 +388,7 @@ export const menuItems: MenuItem[] = [
     category: 'drinks',
     price: 1500,
     description: 'Chilled Kilimanjaro purified mineral drinking water (500ml).',
-    image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=1200&q=85',
     portionSize: '500ml Bottle',
     prepTimeMinutes: 1,
   },
@@ -398,7 +398,7 @@ export const menuItems: MenuItem[] = [
     category: 'drinks',
     price: 2000,
     description: 'Ice-cold carbonated beverage in glass bottle (350ml).',
-    image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80',
+    image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=1200&q=85',
     portionSize: '350ml Cold Bottle',
     prepTimeMinutes: 1,
     availableOptions: [

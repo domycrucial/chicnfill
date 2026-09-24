@@ -80,7 +80,7 @@ export const Navbar: React.FC<NavbarProps> = () => {
               href={`tel:${restaurantConfig.phoneRaw}`}
               id="navbar-call-btn"
               className="hidden sm:inline-flex h-10 items-center gap-1.5 px-3.5 rounded-xl text-xs sm:text-sm font-bold bg-[#1C1C1C] text-neutral-200 hover:text-white hover:bg-[#262626] border border-[#333333] transition-all leading-none"
-              aria-label="Call CHIC-N-FILL on 0659 263 416"
+              aria-label={`Call CHIC-N-FILL on ${restaurantConfig.phoneDisplay}`}
             >
               <Phone className="w-3.5 h-3.5 text-[#F4B41A]" />
               <span>{restaurantConfig.phoneDisplay}</span>

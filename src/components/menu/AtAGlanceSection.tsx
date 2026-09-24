@@ -12,7 +12,6 @@ import {
   CalendarCheck, 
   Accessibility, 
   Phone, 
-  MessageCircle, 
   Plus, 
   Sparkles, 
   ArrowRight,
@@ -69,28 +68,19 @@ export const AtAGlanceSection: React.FC = () => {
             <h2 className="font-heading font-black text-3xl sm:text-4xl text-white tracking-tight">
               AT A GLANCE
             </h2>
-            <p className="text-neutral-400 text-sm sm:text-base mt-1 max-w-xl">
+            <p className="text-neutral-300 text-sm sm:text-base mt-1 max-w-xl">
               Signature fried chicken, loaded burgers, juicy drumsticks, and the legendary Kisinia feast served daily on Pangani Street.
             </p>
           </div>
 
-          {/* Quick Direct Call & WhatsApp Hotlines */}
-          <div className="flex flex-wrap items-center gap-3">
+          {/* Quick Direct Call Hotline */}
+          <div className="flex items-center gap-3">
             <a
               href="tel:+255745138774"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#222222] hover:bg-[#2A2A2A] border border-[#333333] text-white text-xs font-bold transition-all shadow-md active:scale-95"
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-[#F4B41A] hover:bg-[#ffc933] text-black text-xs font-black transition-all shadow-md active:scale-95"
             >
-              <Phone className="w-4 h-4 text-[#F4B41A]" />
-              <span>Call: 0745 138 774</span>
-            </a>
-            <a
-              href="https://wa.me/255659263416"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-black text-xs font-black transition-all shadow-md shadow-[#25D366]/20 active:scale-95"
-            >
-              <MessageCircle className="w-4 h-4 fill-black text-black" />
-              <span>WhatsApp: 0659 263 416</span>
+              <Phone className="w-4 h-4" />
+              <span>Call Order Hotline: 0745 138 774</span>
             </a>
           </div>
         </div>
@@ -120,22 +110,23 @@ export const AtAGlanceSection: React.FC = () => {
         {/* Real Food Photography Showcase + Top Dishes Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
           
-          {/* Real Photo Banner Card from restaurantguru link */}
+          {/* Restaurant Interior Card (100% clean photo) */}
           <div className="lg:col-span-4 rounded-3xl overflow-hidden bg-[#1A1A1A] border border-[#2F2F2F] flex flex-col justify-between group shadow-xl">
             <div className="relative aspect-4/3 sm:aspect-16/10 lg:aspect-auto lg:h-64 overflow-hidden bg-black">
               <img
-                src="/images/chicnfill-meals.jpg"
-                alt="CHIC-N-FILL real meals and feast spread"
+                src="/images/chicnfill-interior.jpg"
+                alt="CHIC-N-FILL Modern Yellow & Black Dining Lounge"
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 loading="eager"
+                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
               <div className="absolute top-3 left-3 bg-[#F4B41A] text-black text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-full shadow-md">
-                Verified Arusha Kitchen
+                Pangani St, Arusha
               </div>
               <div className="absolute bottom-3 left-3 right-3 text-white">
-                <span className="text-xs font-bold block text-neutral-200">Real Guest Experience</span>
-                <span className="font-heading font-black text-sm text-[#F4B41A]">Fresh Chicken, Slices & Feasts</span>
+                <span className="text-xs font-bold block text-neutral-200">Modern Dining Ambiance</span>
+                <span className="font-heading font-black text-sm text-[#F4B41A]">Dine-In • Takeaway • Fast Delivery</span>
               </div>
             </div>
 
@@ -146,8 +137,8 @@ export const AtAGlanceSection: React.FC = () => {
 
               <div className="pt-3 border-t border-[#2A2A2A] flex items-center justify-between">
                 <div>
-                  <span className="text-[11px] text-neutral-400 block">Location:</span>
-                  <span className="text-xs font-bold text-white">Pangani St, Arusha</span>
+                  <span className="text-[11px] text-neutral-400 block">Service Phone:</span>
+                  <span className="text-xs font-bold text-white">0745 138 774</span>
                 </div>
                 <a
                   href="#menu"
@@ -172,14 +163,15 @@ export const AtAGlanceSection: React.FC = () => {
                   <img
                     src={dish.image}
                     alt={dish.name}
-                    className="w-full h-full object-cover group-hover:scale-106 transition-transform duration-500"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
+                    referrerPolicy="no-referrer"
                   />
-                  <div className="absolute top-2.5 right-2.5 bg-black/80 backdrop-blur-md px-2.5 py-1 rounded-full text-xs font-black text-[#F4B41A] border border-white/10">
+                  <div className="absolute top-2.5 right-2.5 bg-black/85 backdrop-blur-md px-2.5 py-1 rounded-full text-xs font-black text-[#F4B41A] border border-white/10 shadow-md">
                     {formatPriceTSh(dish.price)}
                   </div>
                   {dish.portionSize && (
-                    <div className="absolute bottom-2.5 left-2.5 bg-black/75 backdrop-blur-md text-white text-[11px] px-2.5 py-0.5 rounded-lg border border-white/10">
+                    <div className="absolute bottom-2.5 left-2.5 bg-black/80 backdrop-blur-md text-white text-[11px] font-semibold px-2.5 py-0.5 rounded-lg border border-white/10 shadow-md">
                       {dish.portionSize}
                     </div>
                   )}
@@ -199,7 +191,7 @@ export const AtAGlanceSection: React.FC = () => {
                     <button
                       type="button"
                       onClick={() => setActiveDetailItem(dish)}
-                      className="px-3 py-2 rounded-xl bg-[#242424] hover:bg-[#2C2C2C] text-neutral-300 text-xs font-bold transition-colors inline-flex items-center gap-1.5 cursor-pointer"
+                      className="px-3 py-2 rounded-xl bg-[#242424] hover:bg-[#2C2C2C] text-neutral-200 text-xs font-bold transition-colors inline-flex items-center gap-1.5 cursor-pointer"
                     >
                       <Eye className="w-3.5 h-3.5" />
                       <span>Details</span>
@@ -210,7 +202,7 @@ export const AtAGlanceSection: React.FC = () => {
                       onClick={() => handleQuickAdd(dish)}
                       className="flex-1 px-3 py-2 rounded-xl bg-[#F4B41A] hover:bg-[#ffca36] text-black text-xs font-black transition-all inline-flex items-center justify-center gap-1.5 shadow-md shadow-[#F4B41A]/20 active:scale-95 cursor-pointer"
                     >
-                      <Plus className="w-4 h-4" />
+                      <Plus className="w-4 h-4 stroke-[3]" />
                       <span>Order</span>
                     </button>
                   </div>

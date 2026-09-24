@@ -107,6 +107,7 @@ export const GallerySection: React.FC = () => {
                   alt={item.title}
                   className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500 ease-out"
                   loading="lazy"
+                  referrerPolicy="no-referrer"
                 />
 
                 {/* Subtle dark overlay on hover with centered zoom icon - NO TEXT AT ALL */}

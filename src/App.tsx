@@ -12,7 +12,6 @@ import { GallerySection } from './components/gallery/GallerySection';
 import { AboutSection } from './components/about/AboutSection';
 import { ReviewsSection } from './components/reviews/ReviewsSection';
 import { LocationSection } from './components/location/LocationSection';
-import { SocialSection } from './components/social/SocialSection';
 import { FoodDetailModal } from './components/menu/FoodDetailModal';
 import { CartDrawer } from './components/order/CartDrawer';
 import { CheckoutModal } from './components/order/CheckoutModal';
@@ -44,7 +43,7 @@ function MainLayout() {
       {/* Sticky Main Navigation */}
       <Navbar />
 
-      {/* Main Content Sections - Streamlined & Anti-Fatigue */}
+      {/* Main Content Sections */}
       <main className="flex-1 w-full max-w-full overflow-x-hidden">
         <Hero />
         <AtAGlanceSection />
@@ -54,13 +53,12 @@ function MainLayout() {
         <AboutSection />
         <ReviewsSection />
         <LocationSection />
-        <SocialSection />
       </main>
 
-      {/* Footer */}
+      {/* Footer with Complete Social Media Channels */}
       <Footer />
 
-      {/* Floating Action Buttons */}
+      {/* Floating Quick Action */}
       <FloatingWhatsApp />
 
       {/* Interactive Overlays & Modals */}

@@ -3,7 +3,7 @@ import { menuItems } from '../../data/menu';
 import { useCart } from '../../context/CartContext';
 import { useToast } from '../../context/ToastContext';
 import { formatPriceTSh } from '../../utils/formatters';
-import { Users, Flame, Plus, Phone, MessageCircle, Sparkles, CheckCircle2 } from 'lucide-react';
+import { Users, Flame, Plus, Phone, Sparkles, CheckCircle2 } from 'lucide-react';
 
 export const KisiniaSpecialSection: React.FC = () => {
   const { addItem, setActiveDetailItem } = useCart();
@@ -18,14 +18,14 @@ export const KisiniaSpecialSection: React.FC = () => {
 
   const ingredients = [
     'Kuku wa Kitunguu (Caramelized Onion Chicken)',
-    'Ndizi Mzuzu (Fried Sweet Plantains)',
+    'Ndizi Mzuzu (Golden Fried Sweet Plantains)',
     'Chips Plain & Chips Masala',
     'Kuku Makange (Sizzling Spiced Chicken)',
     'Kuku Fries',
     'Wali Mweupe (Steamed Rice)',
     'Aromatic Pilau Rice',
     'Grilled Beef Sausage Slices',
-    'Fresh Crisp Salad & Dips',
+    'Fresh Crisp Salad & Trio of Sauces',
   ];
 
   return (
@@ -35,21 +35,22 @@ export const KisiniaSpecialSection: React.FC = () => {
         <div className="relative rounded-3xl overflow-hidden border border-[#2F2F2F] bg-[#1A1A1A] shadow-2xl">
           <div className="grid grid-cols-1 lg:grid-cols-12 items-stretch">
             
-            {/* Visual Image Presentation: Real Instagram/Arusha Kisinia Photo */}
-            <div className="lg:col-span-6 relative aspect-4/3 sm:aspect-16/10 lg:aspect-auto min-h-[320px] overflow-hidden bg-black">
+            {/* Visual Image Presentation: 4K Enhanced Kisinia Photo */}
+            <div className="lg:col-span-6 relative aspect-4/3 sm:aspect-16/10 lg:aspect-auto min-h-[340px] overflow-hidden bg-black">
               <img
                 src="/images/kisinia-watu-6.jpg"
-                alt="Chic N Fill Kisinia Watu 6 Arusha Grand Feast"
+                alt="CHIC-N-FILL Kisinia Watu 6 Arusha Grand Feast"
                 className="w-full h-full object-cover object-center transform hover:scale-105 transition-transform duration-700"
                 loading="lazy"
+                referrerPolicy="no-referrer"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-[#1A1A1A]" />
               
               <div className="absolute top-4 left-4 flex flex-wrap gap-2">
                 <span className="px-3 py-1 rounded-full bg-[#F4B41A] text-black font-heading font-black text-xs uppercase tracking-wider shadow-lg">
-                  Instagram Sensation @chicnfill
+                  Arusha Signature Feasts
                 </span>
-                <span className="px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-white text-xs font-bold border border-white/20 flex items-center gap-1.5">
+                <span className="px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-white text-xs font-bold border border-white/20 flex items-center gap-1.5 shadow-md">
                   <Users className="w-3.5 h-3.5 text-[#F4B41A]" />
                   <span>Feeds 6 People</span>
                 </span>
@@ -100,7 +101,7 @@ export const KisiniaSpecialSection: React.FC = () => {
                 </div>
               </div>
 
-              {/* Action Buttons: Add to Cart, Phone Call, WhatsApp */}
+              {/* Action Buttons: Add to Cart & Phone Order */}
               <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3">
                 <button
                   type="button"
@@ -112,22 +113,12 @@ export const KisiniaSpecialSection: React.FC = () => {
                 </button>
 
                 <a
-                  href="https://wa.me/255659263416?text=Hello%20CHIC-N-FILL,%20I'd%20like%20to%20order%20Kisinia%20Watu%206%20(TSh%2070,000)"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="py-3.5 px-5 rounded-xl bg-[#25D366] hover:bg-[#20ba59] text-black text-xs font-black transition-all flex items-center justify-center gap-2 shadow-lg shadow-[#25D366]/20 active:scale-95"
-                >
-                  <MessageCircle className="w-4 h-4 fill-black text-black" />
-                  <span>WhatsApp Order</span>
-                </a>
-
-                <a
                   href="tel:+255745138774"
-                  className="py-3.5 px-4 rounded-xl bg-[#222222] hover:bg-[#2A2A2A] text-white border border-[#333333] text-xs font-bold transition-all flex items-center justify-center gap-2"
-                  title="Call Restaurant"
+                  className="py-3.5 px-6 rounded-xl bg-[#222222] hover:bg-[#2A2A2A] text-white border border-[#333333] text-xs font-bold transition-all flex items-center justify-center gap-2"
+                  title="Call Restaurant Service"
                 >
                   <Phone className="w-4 h-4 text-[#F4B41A]" />
-                  <span>0745 138 774</span>
+                  <span>Call: 0745 138 774</span>
                 </a>
               </div>
 

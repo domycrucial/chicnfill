@@ -1,14 +1,13 @@
 import React from 'react';
 import { restaurantConfig } from '../../data/restaurant';
 import { RestaurantStatusBadge } from './RestaurantStatusBadge';
-import { Star, MapPin, Bike, Drumstick, ArrowDownRight, Sparkles, MessageCircle, Phone, Pizza, Package } from 'lucide-react';
-import { getQuickWhatsAppChatUrl } from '../../utils/formatters';
+import { Star, MapPin, Bike, ArrowDownRight, Sparkles, Phone, UtensilsCrossed } from 'lucide-react';
 
 export const Hero: React.FC = () => {
   return (
     <section
       id="home"
-      className="relative pt-6 pb-14 md:pt-10 md:pb-20 overflow-hidden border-b border-[#222222]"
+      className="relative pt-6 pb-12 md:pt-10 md:pb-16 overflow-hidden border-b border-[#222222]"
     >
       {/* Background ambient gold aura */}
       <div className="absolute top-1/4 -left-48 w-96 h-96 bg-[#F4B41A]/10 rounded-full blur-3xl pointer-events-none" />
@@ -35,7 +34,7 @@ export const Hero: React.FC = () => {
             {/* Supporting Copy */}
             <p className="text-base sm:text-lg text-neutral-300 max-w-2xl font-normal leading-relaxed mb-6">
               Welcome to <strong className="text-white font-bold">CHIC-N-FILL</strong> on Pangani Street, Arusha.
-              Home of golden crispy chicken, loaded chicken sandwiches, 10-piece drumsticks, 12" mince pizzas, authentic biryani, and the legendary <strong className="text-[#F4B41A]">Kisinia Watu 6</strong> feast.
+              Home of golden crispy fried chicken, loaded chicken sandwiches, 10-piece drumsticks, stone-baked pizzas, aromatic biryani, and the legendary <strong className="text-[#F4B41A]">Kisinia Watu 6</strong> feast.
             </p>
 
             {/* CTAs */}
@@ -54,18 +53,17 @@ export const Hero: React.FC = () => {
                 id="hero-explore-menu-cta"
                 className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-bold bg-[#1C1C1C] text-neutral-200 hover:text-white hover:bg-[#252525] border border-[#333333] transition-all"
               >
-                <span>Browse Menu</span>
+                <UtensilsCrossed className="w-4 h-4 text-[#F4B41A]" />
+                <span>Explore Full Menu</span>
               </a>
 
               <a
-                href="https://wa.me/255659263416"
-                target="_blank"
-                rel="noopener noreferrer"
-                id="hero-whatsapp-order-cta"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-bold bg-[#25D366]/15 hover:bg-[#25D366]/25 text-[#25D366] border border-[#25D366]/30 transition-all"
+                href="tel:+255745138774"
+                id="hero-call-cta"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl text-sm font-bold bg-[#222222] hover:bg-[#2A2A2A] text-white border border-[#333333] transition-all"
               >
-                <MessageCircle className="w-4 h-4" />
-                <span>WhatsApp: 0659 263 416</span>
+                <Phone className="w-4 h-4 text-[#F4B41A]" />
+                <span>Call: 0745 138 774</span>
               </a>
             </div>
 
@@ -98,7 +96,7 @@ export const Hero: React.FC = () => {
                   <Phone className="w-4 h-4 text-[#F4B41A]" />
                 </div>
                 <div>
-                  <div className="text-xs sm:text-sm font-extrabold text-white">Call To Order</div>
+                  <div className="text-xs sm:text-sm font-extrabold text-white">Direct Service</div>
                   <span className="text-[11px] text-[#F4B41A] font-bold">0745 138 774</span>
                 </div>
               </div>
@@ -116,17 +114,18 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          {/* Right Hero Visual Column (5 cols): Real Restaurant Photography */}
+          {/* Right Hero Visual Column (5 cols) */}
           <div className="lg:col-span-5 relative">
             <div className="relative mx-auto max-w-lg lg:max-w-none">
               
-              {/* Real Chicken & Feast Platter Presentation */}
+              {/* Real Chicken & Feast Platter Presentation (0% cartoon) */}
               <div className="relative rounded-3xl overflow-hidden border-2 border-[#2F2F2F] shadow-2xl bg-[#161616] group">
                 <img
-                  src="/images/chicnfill-meals.jpg"
-                  alt="CHIC-N-FILL Chicken & Slices Feast on Pangani St Arusha"
+                  src="/images/kisinia-watu-6.jpg"
+                  alt="CHIC-N-FILL Kisinia Watu 6 Feast on Pangani St Arusha"
                   className="w-full h-[360px] sm:h-[420px] object-cover object-center group-hover:scale-105 transition-transform duration-700 ease-out"
                   loading="eager"
+                  referrerPolicy="no-referrer"
                 />
                 
                 {/* Gradient overlay on image */}
@@ -139,16 +138,16 @@ export const Hero: React.FC = () => {
                       Authentic Arusha Kitchen
                     </span>
                     <h3 className="font-heading font-black text-sm sm:text-base text-white">
-                      Chic-N-Fill Feasts & Combos
+                      Kisinia Watu 6 Platter
                     </h3>
                     <p className="text-[11px] text-neutral-300">
-                      Fried Chicken, 12" Pizza, Biryani & Kisinia
+                      Chicken, Pilau, Plantains, Sausage & Fries
                     </p>
                   </div>
                   <a
-                    href="#menu"
+                    href="#kisinia"
                     className="p-2.5 rounded-xl bg-[#F4B41A] text-black hover:bg-[#ffca36] transition-colors shrink-0"
-                    aria-label="View menu items"
+                    aria-label="View Kisinia details"
                   >
                     <ArrowDownRight className="w-5 h-5 stroke-[2.5]" />
                   </a>

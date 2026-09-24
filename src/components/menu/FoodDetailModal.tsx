@@ -65,13 +65,14 @@ export const FoodDetailModal: React.FC = () => {
             src={activeDetailItem.image}
             alt={activeDetailItem.name}
             className="w-full h-full object-cover object-center"
+            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-[#181818] via-transparent to-transparent pointer-events-none" />
 
           {/* Badges */}
           <div className="absolute top-4 left-4 flex gap-2">
             {activeDetailItem.isPopular && (
-              <span className="bg-[#F4B400] text-black text-xs font-black uppercase px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1">
+              <span className="bg-[#F4B41A] text-black text-xs font-black uppercase px-2.5 py-1 rounded-lg shadow-md flex items-center gap-1">
                 <Sparkles className="w-3 h-3 fill-black text-black" />
                 Signature
               </span>
@@ -85,7 +86,7 @@ export const FoodDetailModal: React.FC = () => {
           </div>
 
           {activeDetailItem.portionSize && (
-            <div className="absolute bottom-3 left-4 bg-black/75 backdrop-blur-md text-[#F4B400] text-xs font-bold px-3 py-1 rounded-lg border border-[#F4B400]/20">
+            <div className="absolute bottom-3 left-4 bg-black/75 backdrop-blur-md text-[#F4B41A] text-xs font-bold px-3 py-1 rounded-lg border border-[#F4B41A]/20">
               {activeDetailItem.portionSize}
             </div>
           )}

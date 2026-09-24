@@ -291,7 +291,7 @@ export const ReservationSection: React.FC = () => {
                     <input
                       type="tel"
                       required
-                      placeholder="e.g., 0659 263 416"
+                      placeholder="e.g., 0745 138 774"
                       value={phoneNumber}
                       onChange={(e) => setPhoneNumber(e.target.value)}
                       className="w-full bg-[#222222] border border-[#333333] rounded-xl px-4 py-3 text-sm text-white focus:outline-none focus:border-[#F4B41A] transition-colors"

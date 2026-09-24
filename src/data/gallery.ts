@@ -24,15 +24,15 @@ export const galleryItems: GalleryItem[] = [
     attendeesOrHighlight: 'Feeds 6 People • Party Tray',
   },
   {
-    id: 'gal-meals-spread',
-    title: 'Authentic Chicken & Fries Feast',
-    category: 'kitchen',
-    categoryLabel: 'Kitchen Fresh',
-    imageUrl: '/images/chicnfill-meals.jpg',
+    id: 'gal-family-spread',
+    title: 'ChicFill Family 20-Piece Chicken Feast',
+    category: 'packages',
+    categoryLabel: 'Family Package',
+    imageUrl: '/images/chicnfill-family.jpg',
     caption:
-      'Hot crispy fried chicken drumsticks, golden crunchy french fries, cold Coca-Cola, and house-made dipping sauces served on wooden boards.',
+      'Freshly fried 20-piece crispy golden chicken, jumbo boxes of seasoned fries, and cold soda ready for group dining on Pangani Street.',
     dateOrTag: 'Daily Fresh Preparation',
-    attendeesOrHighlight: 'Double Dredged • Golden Crunch',
+    attendeesOrHighlight: '20 Pieces • Jumbo Fries • 1.5L Soda',
   },
   {
     id: 'gal-team-dispatch',
@@ -41,7 +41,7 @@ export const galleryItems: GalleryItem[] = [
     categoryLabel: 'Delivery & Takeaway',
     imageUrl: '/images/chicnfill-team.jpg',
     caption:
-      'Our friendly team packaging hot 12-inch mince pizzas and crispy chicken boxes into thermal delivery bags for fast dispatch across Arusha.',
+      'Our friendly team packaging hot stone-oven pizzas and crispy chicken boxes into thermal delivery bags for fast dispatch across Arusha.',
     dateOrTag: 'Hot Dispatch Daily',
     attendeesOrHighlight: 'Thermal Insulated • Fast Delivery',
   },
@@ -50,7 +50,7 @@ export const galleryItems: GalleryItem[] = [
     title: '12-Inch Stone-Oven Mince Pizza',
     category: 'kitchen',
     categoryLabel: 'Pizzeria Craft',
-    imageUrl: '/images/chicnfill-mince-pizza.jpg',
+    imageUrl: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1200&auto=format&fit=crop&q=85',
     caption:
       'Freshly baked stone-oven pizza topped with seasoned ground beef mince, bell peppers, mozzarella cheese, and aromatic oregano.',
     dateOrTag: 'Stone Oven Baked',
