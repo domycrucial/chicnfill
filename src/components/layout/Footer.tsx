@@ -57,14 +57,13 @@ export const Footer: React.FC = () => {
             <ul className="space-y-2 text-sm">
               {[
                 { label: 'Home', href: '#home' },
-                { label: 'Packages', href: '#packages' },
-                { label: 'Menu', href: '#menu' },
-                { label: 'Events', href: '#events' },
-                { label: 'Events & Vibe', href: '#gallery' },
-                { label: 'Reserve Table', href: '#reserve' },
-                { label: 'About', href: '#about' },
+                { label: 'At a Glance', href: '#at-a-glance' },
+                { label: 'Full Menu', href: '#menu' },
+                { label: 'Kisinia Feast', href: '#kisinia' },
+                { label: 'Atmosphere & Gallery', href: '#gallery' },
+                { label: 'About Us', href: '#about' },
                 { label: 'Reviews', href: '#reviews' },
-                { label: 'Location', href: '#location' },
+                { label: 'Location & Map', href: '#location' },
               ].map((link) => (
                 <li key={link.label}>
                   <a

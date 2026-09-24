@@ -4,12 +4,15 @@ export type PaymentMethod = 'cash' | 'mobile-money' | 'pay-on-pickup';
 
 export type MenuCategory = 
   | 'all'
-  | 'packages'
   | 'chicken'
+  | 'sandwiches'
+  | 'drumsticks'
+  | 'fries'
   | 'pizza'
-  | 'fries-sides'
-  | 'sauces-dips'
-  | 'drinks';
+  | 'biryani'
+  | 'kisinia'
+  | 'drinks'
+  | 'packages';
 
 export interface MenuItem {
   id: string;
@@ -112,11 +115,14 @@ export interface RestaurantConfig {
   };
   phoneDisplay: string;
   phoneRaw: string;
+  secondaryPhone?: string;
+  secondaryPhoneDisplay?: string;
   whatsappNumber: string;
   priceRange: string;
   rating: number;
   reviewCount: number;
   services: string[];
+  features?: string[];
   transportOptions: string[];
   hours: RestaurantHours;
   announcement: {

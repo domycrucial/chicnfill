@@ -2,39 +2,120 @@ import { MenuItem } from '../types';
 
 export const menuItems: MenuItem[] = [
   // ==========================================
-  // SIGNATURE PACKAGES & COMBOS (INSTAGRAM FAVOURITES)
+  // KISINIA (GRAND SHARING FEAST TRAY)
   // ==========================================
   {
-    id: 'pkg-chic-pizza-family',
-    name: 'Chic-N-Pizza Mega Family Feast',
-    category: 'packages',
-    price: 58000,
+    id: 'cnf-kisinia-watu-6',
+    name: 'Kisinia Watu 6',
+    category: 'kisinia',
+    price: 70000,
     isPopular: true,
     isPackage: true,
     description:
-      'The ultimate crowd-pleaser: 16 pcs of our signature Soy Garlic chicken drumettes & wings, paired with a Large Loaded Beef Pepperoni Pizza, 2 large golden fries, 3 house dipping sauces, and a 1.5L chilled beverage.',
-    image:
-      'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1000&q=80',
-    portionSize: 'Feeds 4–6 Diners',
-    prepTimeMinutes: 22,
+      'Kuku wa Kitunguu, Ndizi Mzuzu, Chips Plain, Chips Masala, Kuku Makange, Kuku Fries Wali, Pilau, Sausage, Salad. The ultimate grand sharing feast tray for 6 people!',
+    image: '/images/kisinia-watu-6.jpg',
+    portionSize: 'Feeds 6 People',
+    prepTimeMinutes: 25,
     packageIncludes: [
-      '16 pcs Soy Garlic Chicken',
-      'Large Beef Pepperoni Pizza',
-      '2x Large Golden Fries',
-      '3x Signature Sauces (Garlic, Mustard Honey, Chili)',
-      '1.5L Chilled Soft Drink',
+      'Kuku wa Kitunguu (Caramelized Onion Chicken)',
+      'Ndizi Mzuzu (Golden Fried Sweet Plantains)',
+      'Chips Plain & Chips Masala',
+      'Kuku Makange (Sizzling Spiced Chicken)',
+      'Wali Mweupe (White Rice) & Spiced Pilau',
+      'Grilled Beef Sausage Slices',
+      'Fresh Crisp Kachumbari Salad',
+      'Trio of House Dipping Sauces',
     ],
     availableOptions: [
       {
-        name: 'Chicken Flavor Glaze',
+        name: 'Rice Preference',
         choices: [
-          { label: 'Signature Soy Garlic (Sweet & Savory)', extraPrice: 0 },
-          { label: 'Mustard Honey Crunch', extraPrice: 0 },
-          { label: 'Half Soy Garlic / Half Spicy Arusha', extraPrice: 1500 },
+          { label: 'Half Pilau / Half Wali Mweupe', extraPrice: 0 },
+          { label: 'All Spiced Pilau Rice', extraPrice: 0 },
+          { label: 'All Steamed White Rice', extraPrice: 0 },
+        ],
+      },
+    ],
+  },
+
+  // ==========================================
+  // CHICKEN
+  // ==========================================
+  {
+    id: 'cnf-chicken-single',
+    name: 'ChicFill Single',
+    category: 'chicken',
+    price: 10000,
+    isPopular: true,
+    description: '4 pieces of Chickens and Fries. Crispy, hot, and freshly fried to order.',
+    image: '/images/chicnfill-single.jpg',
+    pieceCount: 4,
+    portionSize: 'Single Meal (4 Pcs + Fries)',
+    prepTimeMinutes: 12,
+    availableOptions: [
+      {
+        name: 'Flavor / Glaze',
+        choices: [
+          { label: 'Classic Golden Crunch', extraPrice: 0 },
+          { label: 'Signature Soy Garlic Glaze', extraPrice: 500 },
+          { label: 'Fiery Arusha Spice', extraPrice: 500 },
         ],
       },
       {
-        name: 'Beverage Choice',
+        name: 'Free Dipping Sauce',
+        choices: [
+          { label: 'Garlic Mayo Dip', extraPrice: 0 },
+          { label: 'Tomato Ketchup', extraPrice: 0 },
+          { label: 'Spicy Pili Pili Sauce', extraPrice: 0 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'cnf-half-chicken',
+    name: 'ChicFill Half Chicken',
+    category: 'chicken',
+    price: 15000,
+    isPopular: true,
+    description: '8 pieces of Chicken served with sauce of your choice.',
+    image: '/images/chicnfill-half-chicken.jpg',
+    pieceCount: 8,
+    portionSize: '8 Pieces (Serves 1-2)',
+    prepTimeMinutes: 15,
+    availableOptions: [
+      {
+        name: 'Choice of Sauce',
+        choices: [
+          { label: 'Mustard Honey Sauce', extraPrice: 0 },
+          { label: 'Garlic Mayo Aioli', extraPrice: 0 },
+          { label: 'Soy Garlic Glaze', extraPrice: 0 },
+          { label: 'Fiery Arusha Hot Sauce', extraPrice: 0 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'cnf-family-chicken',
+    name: 'ChicFill Family',
+    category: 'chicken',
+    price: 40000,
+    isPopular: true,
+    isPackage: true,
+    description:
+      'It comes with 20 pieces of Chicken, 1 Big Fries, and 1 Big Soda of your Choice. Ideal for a group of 3-5 people who wants to share their meal.',
+    image: '/images/chicnfill-family.jpg',
+    pieceCount: 20,
+    portionSize: 'Family Pack (3–5 People)',
+    prepTimeMinutes: 20,
+    packageIncludes: [
+      '20 pieces of Golden Crispy Chicken',
+      '1 Jumbo Box of Golden Seasoned Fries',
+      '1 Big 1.5L Chilled Soda of Your Choice',
+      '3 Dipping Sauces Included',
+    ],
+    availableOptions: [
+      {
+        name: 'Big Soda Choice',
         choices: [
           { label: 'Coca-Cola 1.5L', extraPrice: 0 },
           { label: 'Fanta Orange 1.5L', extraPrice: 0 },
@@ -42,403 +123,294 @@ export const menuItems: MenuItem[] = [
           { label: 'Stoney Tangawizi 1.5L', extraPrice: 0 },
         ],
       },
-    ],
-  },
-  {
-    id: 'pkg-solo-crunch-slice',
-    name: 'Solo Crunch & Slice Box',
-    category: 'packages',
-    price: 22000,
-    isPopular: true,
-    isPackage: true,
-    description:
-      'The signature Chic-N-Fill double-header: 3 pcs golden crispy chicken, 1 thick hot slice of stone-baked pepperoni pizza, crisp french fries, garlic aioli, and a chilled soda.',
-    image:
-      'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1000&q=80',
-    portionSize: 'Single Diner Box',
-    prepTimeMinutes: 14,
-    packageIncludes: [
-      '3 pcs Crispy Fried Chicken',
-      '1 Hot Slice Pepperoni Pizza',
-      'Golden Regular Fries',
-      '1 Garlic Dip',
-      '1 Chilled 350ml Soda',
-    ],
-    availableOptions: [
       {
-        name: 'Chicken Glaze',
+        name: 'Chicken Flavor',
         choices: [
-          { label: 'Classic Crunchy (No Glaze)', extraPrice: 0 },
-          { label: 'Soy Garlic Glazed', extraPrice: 1000 },
-          { label: 'Mustard Honey Glazed', extraPrice: 1000 },
+          { label: 'Classic Crispy Crunch', extraPrice: 0 },
+          { label: 'Soy Garlic Tossed', extraPrice: 1000 },
+          { label: 'Half Classic / Half Soy Garlic', extraPrice: 1000 },
         ],
       },
-      {
-        name: 'Soda Selection',
-        choices: [
-          { label: 'Coca-Cola (Cold)', extraPrice: 0 },
-          { label: 'Stoney Tangawizi', extraPrice: 0 },
-          { label: 'Sprite', extraPrice: 0 },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'pkg-duo-feast',
-    name: 'Duo Feast Package (Chicken + Pizza)',
-    category: 'packages',
-    price: 39000,
-    isPopular: true,
-    isPackage: true,
-    description:
-      'Engineered for two: 8 pcs Honey Mustard or Soy Garlic chicken wings, 1 Medium BBQ Chicken Pizza, large fries, 2 dips, and 2 cold drinks.',
-    image:
-      'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1000&q=80',
-    portionSize: 'Serves 2 Diners',
-    prepTimeMinutes: 18,
-    packageIncludes: [
-      '8 pcs Chicken Wings & Drumettes',
-      'Medium BBQ Chicken Pizza',
-      '1 Large Golden Fries',
-      '2 Dips',
-      '2 Cold 350ml Sodas',
-    ],
-    availableOptions: [
-      {
-        name: 'Chicken Coating',
-        choices: [
-          { label: 'Mustard Honey Crunch', extraPrice: 0 },
-          { label: 'Soy Garlic Classic', extraPrice: 0 },
-          { label: 'Spicy Hot Crunch', extraPrice: 1000 },
-        ],
-      },
-    ],
-  },
-  {
-    id: 'pkg-wings-party-platter',
-    name: 'Party Platter: 20 Pcs Wings & Large Pizza',
-    category: 'packages',
-    price: 64000,
-    isPopular: false,
-    isPackage: true,
-    description:
-      'Game day & celebration special: 20 pcs assorted crispy wings (10 Soy Garlic + 10 Fiery Arusha Crunch) with a Large Loaded Cheese & Pepperoni Pizza and trio sauces.',
-    image:
-      'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=800&q=80&fit=crop',
-    portionSize: 'Serves 4–6 People',
-    prepTimeMinutes: 25,
-    packageIncludes: [
-      '20 pcs Wings (Soy Garlic & Fiery Crunch)',
-      'Large Loaded Pizza (Choice)',
-      '3 Signature Sauces',
-      'Large Crinkle Fries',
-    ],
-  },
-  {
-    id: 'pkg-arusha-lunch-express',
-    name: 'Arusha Express Lunch Special',
-    category: 'packages',
-    price: 12000,
-    isPopular: true,
-    isPackage: true,
-    description:
-      'Quick lunch rush hero on Pangani Street: 2 pcs crispy fried chicken drumsticks, seasoned french fries, and a cold soft drink or Tangawizi.',
-    image:
-      'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=1000&q=80',
-    portionSize: 'Lunch Special',
-    prepTimeMinutes: 10,
-    packageIncludes: [
-      '2 pcs Golden Fried Chicken',
-      'Seasoned French Fries',
-      'Chilled Soft Drink',
     ],
   },
 
   // ==========================================
-  // FRIED CHICKEN VARIETIES (SIGNATURE ITEMS)
+  // CHICKEN SANDWICHES
   // ==========================================
   {
-    id: 'cnf-soy-garlic-16',
-    name: 'Chic Fill Soy Garlic (16 pcs)',
-    category: 'chicken',
-    price: 38000,
-    pieceCount: 16,
+    id: 'cnf-sandwich-regular',
+    name: 'Chic Fill Sandwich',
+    category: 'sandwiches',
+    price: 16000,
     isPopular: true,
     description:
-      'Customer top pick: 16 pcs of tender chicken drumettes and wings tossed in our savory-sweet artisanal soy garlic glaze with roasted sesame seeds.',
-    image:
-      'https://images.unsplash.com/photo-1626082927389-6cd097cdc6ec?auto=format&fit=crop&w=1000&q=80',
-    portionSize: '16 pcs Bucket',
+      'With regular fries and the choice of your favourite souce. Tender crispy chicken breast in a toasted gourmet bun with crisp pickles and lettuce.',
+    image: '/images/chicnfill-sandwich.jpg',
+    portionSize: 'Burger + Regular Fries',
+    prepTimeMinutes: 10,
+    availableOptions: [
+      {
+        name: 'Choice of Favourite Sauce',
+        choices: [
+          { label: 'Signature Garlic Mayo', extraPrice: 0 },
+          { label: 'Mustard Honey Dip', extraPrice: 0 },
+          { label: 'Smoky BBQ Sauce', extraPrice: 0 },
+          { label: 'Fiery Pili Pili Sauce', extraPrice: 0 },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'cnf-sandwich-big',
+    name: 'Chic Fill Big Sandwiches',
+    category: 'sandwiches',
+    price: 25000,
+    isPopular: true,
+    description:
+      'With regular fries and drinks of 400mls. Double loaded crispy chicken fillet sandwich stacked with melted cheese, fresh salad, fries, and cold drink.',
+    image: '/images/chicnfill-big-sandwich.jpg',
+    portionSize: 'Big Sandwich + Fries + 400ml Drink',
+    prepTimeMinutes: 14,
+    packageIncludes: [
+      'Big Double-Fillet Chicken Sandwich',
+      'Regular Golden Seasoned Fries',
+      '400ml Chilled Beverage of Choice',
+    ],
+    availableOptions: [
+      {
+        name: 'Choice of 400ml Drink',
+        choices: [
+          { label: 'Chilled Coca-Cola', extraPrice: 0 },
+          { label: 'Fanta Orange', extraPrice: 0 },
+          { label: 'Sprite Lemon-Lime', extraPrice: 0 },
+          { label: 'Stoney Tangawizi', extraPrice: 0 },
+        ],
+      },
+      {
+        name: 'Sauce in Sandwich',
+        choices: [
+          { label: 'Creamy Garlic Mayo', extraPrice: 0 },
+          { label: 'Honey Mustard Glaze', extraPrice: 0 },
+          { label: 'Spicy Fire Sauce', extraPrice: 0 },
+        ],
+      },
+    ],
+  },
+
+  // ==========================================
+  // DRUMSTICKS
+  // ==========================================
+  {
+    id: 'cnf-drumstick-10',
+    name: 'Chic Fill Drumstick 10pcs',
+    category: 'drumsticks',
+    price: 25000,
+    isPopular: true,
+    description:
+      '10 pieces of seasoned juicy chicken drumsticks fried to deep-golden crunch, served with dipping sauces.',
+    image: '/images/chicnfill-drumsticks.jpg',
+    pieceCount: 10,
+    portionSize: '10 Pcs Drumsticks Box',
     prepTimeMinutes: 15,
     availableOptions: [
       {
-        name: 'Dip Option',
+        name: 'Glaze or Seasoning',
         choices: [
-          { label: 'Garlic Aioli', extraPrice: 0 },
-          { label: 'Extra Soy Garlic Glaze', extraPrice: 1500 },
-          { label: 'Honey Mustard Dip', extraPrice: 1500 },
+          { label: 'Original Golden Crispy', extraPrice: 0 },
+          { label: 'Soy Garlic Glazed', extraPrice: 1000 },
+          { label: 'Hot & Spicy Chili Dust', extraPrice: 1000 },
         ],
       },
     ],
   },
   {
-    id: 'cnf-soy-garlic-8',
-    name: 'Chic Fill Soy Garlic (8 pcs)',
-    category: 'chicken',
-    price: 22000,
-    pieceCount: 8,
-    isPopular: true,
-    description:
-      '8 pcs freshly fried crispy wings coated in caramelized soy garlic reduction and toasted sesame crunch.',
-    image:
-      'https://images.unsplash.com/photo-1569058242253-92a9c755a0ec?auto=format&fit=crop&w=1000&q=80',
-    portionSize: '8 pcs Box',
-    prepTimeMinutes: 12,
-  },
-  {
-    id: 'cnf-mustard-honey-8',
-    name: 'Chic-N-Fill Mustard Honey (8 pcs)',
-    category: 'chicken',
-    price: 24000,
-    pieceCount: 8,
-    isPopular: true,
-    description:
-      'Golden crunchy chicken glazed with our vibrant sweet honey and tangy mild mustard sauce. Crisp skin with juicy tender meat.',
-    image:
-      'https://images.unsplash.com/photo-1585325701956-60dd9c8553bc?auto=format&fit=crop&w=1000&q=80',
-    portionSize: '8 pcs Box',
-    prepTimeMinutes: 12,
-  },
-  {
-    id: 'cnf-crispy-chicken-4',
-    name: 'Classic Crispy Fried Chicken (4 pcs)',
-    category: 'chicken',
-    price: 15000,
-    pieceCount: 4,
+    id: 'cnf-drumstick-4',
+    name: 'Chic Fill Drumstick 4pcs',
+    category: 'drumsticks',
+    price: 13000,
     isPopular: false,
     description:
-      'Traditional Southern double-dredged golden fried chicken pieces (thighs and drumsticks) with signature herb crunch.',
-    image:
-      'https://images.unsplash.com/photo-1626645738196-c2a7c87a8f58?auto=format&fit=crop&w=1000&q=80',
-    portionSize: '4 pcs Plate',
+      'Every Tuesday offer 4pcs Drumstick With regular fries Pick your favourite souce.',
+    image: '/images/chicnfill-drumsticks-platter.jpg',
+    pieceCount: 4,
+    portionSize: '4 Drumsticks + Regular Fries',
     prepTimeMinutes: 12,
-  },
-  {
-    id: 'cnf-fiery-wings-8',
-    name: 'Fiery Arusha Hot Wings (8 pcs)',
-    category: 'chicken',
-    price: 23000,
-    pieceCount: 8,
-    isSpicy: true,
-    description:
-      'Crispy wings tossed in fiery chili oil, smoked paprika, and lime zest. For heat lovers in Arusha!',
-    image:
-      'https://images.unsplash.com/photo-1567620832903-9fc6debc209f?auto=format&fit=crop&w=1000&q=80',
-    portionSize: '8 pcs Spicy Box',
-    prepTimeMinutes: 12,
-  },
-
-  // ==========================================
-  // STONE-BAKED PIZZAS
-  // ==========================================
-  {
-    id: 'pza-loaded-pepperoni',
-    name: 'Loaded Beef Pepperoni Pizza',
-    category: 'pizza',
-    price: 28000,
-    isPopular: true,
-    description:
-      'Stone-baked thin crust pizza with Italian tomato base, melted mozzarella cheese, and generous rounds of premium beef pepperoni.',
-    image:
-      'https://images.unsplash.com/photo-1628840042765-356cda07504e?auto=format&fit=crop&w=1000&q=80',
-    portionSize: 'Large 12-inch (8 Slices)',
-    prepTimeMinutes: 18,
     availableOptions: [
       {
-        name: 'Size',
+        name: 'Pick Your Favourite Sauce',
         choices: [
-          { label: 'Large 12" (8 Slices)', extraPrice: 0 },
-          { label: 'Medium 10" (6 Slices)', extraPrice: -6000 },
-          { label: 'Single Mega Slice', extraPrice: -22000 },
-        ],
-      },
-      {
-        name: 'Extra Topping',
-        choices: [
-          { label: 'Standard Cheese', extraPrice: 0 },
-          { label: 'Double Mozzarella', extraPrice: 4000 },
-          { label: 'Fresh Jalapeños', extraPrice: 2000 },
+          { label: 'Garlic Mayo Dip', extraPrice: 0 },
+          { label: 'Tomato Ketchup', extraPrice: 0 },
+          { label: 'Mustard Honey Dip', extraPrice: 0 },
+          { label: 'Fiery Pili Pili Dip', extraPrice: 0 },
         ],
       },
     ],
   },
-  {
-    id: 'pza-bbq-chicken',
-    name: 'Chic-N-BBQ Chicken Pizza',
-    category: 'pizza',
-    price: 29000,
-    isPopular: true,
-    description:
-      'Tender pulled chicken tossed in smoky BBQ sauce, sweet red onions, mozzarella, and a drizzle of garlic sauce on charred crust.',
-    image:
-      'https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=1000&q=80',
-    portionSize: 'Large 12-inch (8 Slices)',
-    prepTimeMinutes: 18,
-  },
-  {
-    id: 'pza-mushroom-cheese',
-    name: 'Button Mushroom & Mozzarella Pizza',
-    category: 'pizza',
-    price: 26000,
-    isPopular: false,
-    description:
-      'Sautéed button mushrooms, aromatic oregano, garlic oil drizzle, rich tomato marinara, and gooey melted mozzarella.',
-    image:
-      'https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=1000&q=80',
-    portionSize: 'Large 12-inch',
-    prepTimeMinutes: 16,
-  },
 
   // ==========================================
-  // FRIES & SIDES
+  // FRIES
   // ==========================================
   {
     id: 'cnf-fries-regular',
-    name: 'Golden French Fries',
-    category: 'fries-sides',
-    price: 5000,
-    isPopular: true,
-    description:
-      'Crispy on the outside, fluffy inside, salted with our signature seasoning blend.',
-    image:
-      'https://images.unsplash.com/photo-1611143669185-af224c5e3252?w=800&q=80&fit=crop',
+    name: 'Regular Fries',
+    category: 'fries',
+    price: 3000,
+    isPopular: false,
+    description: 'Crispy on the outside, fluffy inside, salted with our signature seasoning blend.',
+    image: '/images/chicnfill-regular-fries.jpg',
     portionSize: 'Regular Box',
     prepTimeMinutes: 6,
+  },
+  {
+    id: 'cnf-fries-boat-box',
+    name: 'Boat Box Fries',
+    category: 'fries',
+    price: 5000,
+    isPopular: true,
+    description: 'With any favourite mayonnaise ketchup. Generous boat-style basket of hot crisp fries.',
+    image: '/images/chicnfill-boat-fries.jpg',
+    portionSize: 'Loaded Boat Box',
+    prepTimeMinutes: 7,
     availableOptions: [
       {
-        name: 'Size Upgrade',
+        name: 'Sauce Topping Choice',
         choices: [
-          { label: 'Regular Portion', extraPrice: 0 },
-          { label: 'Large Share Portion', extraPrice: 3000 },
+          { label: 'Classic Mayo & Ketchup Duo', extraPrice: 0 },
+          { label: 'Garlic Mayo Aioli', extraPrice: 0 },
+          { label: 'Spicy Pili Pili & Mayo', extraPrice: 0 },
         ],
       },
     ],
   },
-  {
-    id: 'cnf-peri-fries',
-    name: 'Peri-Peri Loaded Fries',
-    category: 'fries-sides',
-    price: 8000,
-    isSpicy: true,
-    description:
-      'Crispy golden fries tossed in zesty peri-peri spice dust and served with a side of house garlic mayo.',
-    image:
-      'https://images.unsplash.com/photo-1585109649139-366815a0d713?auto=format&fit=crop&w=1000&q=80',
-    portionSize: 'Loaded Box',
-    prepTimeMinutes: 7,
-  },
-  {
-    id: 'cnf-onion-rings',
-    name: 'Crispy Battered Onion Rings',
-    category: 'fries-sides',
-    price: 6500,
-    isPopular: false,
-    description:
-      'Thick sweet white onion rings dipped in seasoned batter and fried until golden and shatteringly crunchy.',
-    image:
-      'https://plus.unsplash.com/premium_photo-1701013639121-db90aefda5f2?q=80&w=800&auto=format&fit=crop',
-    portionSize: '10 pcs Ring Box',
-    prepTimeMinutes: 8,
-  },
 
   // ==========================================
-  // SAUCES & DIPS
+  // PIZZA
   // ==========================================
   {
-    id: 'cnf-dip-soy-garlic',
-    name: 'Signature Soy Garlic Glaze Tub',
-    category: 'sauces-dips',
-    price: 2500,
-    description:
-      'Our house-cooked caramelized soy reduction with roasted garlic and sesame seeds.',
-    image:
-      'https://images.unsplash.com/photo-1472476443507-c7a5948772fc?auto=format&fit=crop&w=600&q=80',
-    portionSize: '60ml Dipping Cup',
-    prepTimeMinutes: 1,
-  },
-  {
-    id: 'cnf-dip-mustard-honey',
-    name: 'Chic-N-Fill Mustard Honey Dip',
-    category: 'sauces-dips',
-    price: 2500,
-    description:
-      'Smooth sweet wild honey whipped with whole grain tangy yellow mustard.',
-    image:
-      'https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=600&q=80',
-    portionSize: '60ml Dipping Cup',
-    prepTimeMinutes: 1,
-  },
-  {
-    id: 'cnf-dip-garlic-aioli',
-    name: 'Creamy Garlic Aioli',
-    category: 'sauces-dips',
-    price: 2500,
-    description:
-      'Silky mayonnaise infused with roasted garlic, lemon juice, and black pepper.',
-    image:
-      'https://images.unsplash.com/photo-1541544741938-0af808871cc0?auto=format&fit=crop&w=600&q=80',
-    portionSize: '60ml Dipping Cup',
-    prepTimeMinutes: 1,
-  },
-
-  // ==========================================
-  // DRINKS & JUICES
-  // ==========================================
-  {
-    id: 'cnf-passion-juice',
-    name: 'Fresh Arusha Passion Fruit Juice',
-    category: 'drinks',
-    price: 4000,
+    id: 'cnf-mince-pizza',
+    name: 'CHIC FILL MINCE PIZZA',
+    category: 'pizza',
+    price: 20000,
     isPopular: true,
     description:
-      'Freshly squeezed Tanzanian passion fruit juice, lightly sweetened and served ice-cold.',
-    image:
-      'https://images.unsplash.com/photo-1513558161293-cdaf765ed2fd?auto=format&fit=crop&w=600&q=80',
-    portionSize: '400ml Chilled Bottle',
-    prepTimeMinutes: 2,
+      '12 inches pizza ideal for 2-3 people. Fresh stone-oven baked crust layered with savory seasoned ground beef mince, melted mozzarella cheese, fresh bell peppers, and herbs.',
+    image: '/images/chicnfill-mince-pizza.jpg',
+    portionSize: '12 Inches (Feeds 2–3 People)',
+    prepTimeMinutes: 18,
+    availableOptions: [
+      {
+        name: 'Crust Preference',
+        choices: [
+          { label: 'Classic Stone-Baked Hand Tossed', extraPrice: 0 },
+          { label: 'Thin & Crispy Roman Style', extraPrice: 0 },
+        ],
+      },
+      {
+        name: 'Chili Level',
+        choices: [
+          { label: 'Mild / Regular', extraPrice: 0 },
+          { label: 'Add Jalapeño & Fresh Green Chili', extraPrice: 1000 },
+        ],
+      },
+    ],
+  },
+
+  // ==========================================
+  // BIRYANI
+  // ==========================================
+  {
+    id: 'cnf-biryani-chicken',
+    name: 'Chicken Biryani',
+    category: 'biryani',
+    price: 10000,
+    isPopular: true,
+    description:
+      'Aromatic spiced basmati rice infused with cardamom and cloves, served with a tender chicken piece and rich Swahili curry sauce.',
+    image: '/images/chicnfill-biryani.jpg',
+    portionSize: 'Standard Plate',
+    prepTimeMinutes: 8,
+  },
+  {
+    id: 'cnf-biryani-beef',
+    name: 'Beef Biryani',
+    category: 'biryani',
+    price: 8000,
+    isPopular: false,
+    description:
+      'Flavorful, rich spiced basmati rice served with slow-braised tender beef cubes in aromatic masala gravy.',
+    image: '/images/chicnfill-biryani.jpg',
+    portionSize: 'Standard Plate',
+    prepTimeMinutes: 8,
+  },
+  {
+    id: 'cnf-biryani-kuku-nusu',
+    name: 'Chicken Biryani (Kuku Nusu)',
+    category: 'biryani',
+    price: 15000,
+    isPopular: true,
+    description:
+      'This Biryani is ideal for someone who wants bigger piece of chicken and more Biryani rice.',
+    image: '/images/chicnfill-biryani.jpg',
+    portionSize: 'Large Plate (Half Chicken)',
+    prepTimeMinutes: 10,
+  },
+  {
+    id: 'cnf-biryani-whole-chicken',
+    name: 'Chicken Biryani (Whole Chicken)',
+    category: 'biryani',
+    price: 20000,
+    isPopular: true,
+    description:
+      'This plate is ideal for two people who wants to share a plate together (Friends or Couple). Juice not part of the Menu.',
+    image: '/images/chicnfill-biryani.jpg',
+    portionSize: 'Sharing Plate for 2 Diners',
+    prepTimeMinutes: 15,
+  },
+
+  // ==========================================
+  // DRINKS
+  // ==========================================
+  {
+    id: 'cnf-tropical-juice',
+    name: 'Tropical Juice',
+    category: 'drinks',
+    price: 5000,
+    isPopular: true,
+    description: 'Mango, Passion mixed with pineapple Juice. 100% freshly pressed, ice chilled, and refreshing.',
+    image: '/images/chicnfill-tropical-juice.jpg',
+    portionSize: 'Chilled Glass / Mason Jar (400ml)',
+    prepTimeMinutes: 4,
+  },
+  {
+    id: 'cnf-mineral-water',
+    name: 'Still Mineral Water',
+    category: 'drinks',
+    price: 1500,
+    description: 'Chilled Kilimanjaro purified mineral drinking water (500ml).',
+    image: 'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=800&q=80',
+    portionSize: '500ml Bottle',
+    prepTimeMinutes: 1,
   },
   {
     id: 'cnf-soda-cold',
-    name: 'Chilled Soft Drink (Coke, Tangawizi, Fanta)',
+    name: 'Chilled Soft Drink',
     category: 'drinks',
     price: 2000,
-    description:
-      'Ice-cold bottled soda: Coca-Cola, Stoney Tangawizi, Fanta Passion/Orange, Sprite.',
-    image:
-      'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=600&q=80',
-    portionSize: '350ml Glass Bottle',
+    description: 'Ice-cold carbonated beverage in glass bottle (350ml).',
+    image: 'https://images.unsplash.com/photo-1622483767028-3f66f32aef97?auto=format&fit=crop&w=800&q=80',
+    portionSize: '350ml Cold Bottle',
     prepTimeMinutes: 1,
     availableOptions: [
       {
         name: 'Flavor',
         choices: [
-          { label: 'Stoney Tangawizi (Ginger Heat)', extraPrice: 0 },
           { label: 'Coca-Cola Original', extraPrice: 0 },
+          { label: 'Stoney Tangawizi (Ginger Heat)', extraPrice: 0 },
           { label: 'Fanta Orange', extraPrice: 0 },
           { label: 'Sprite (Lemon-Lime)', extraPrice: 0 },
         ],
       },
     ],
-  },
-  {
-    id: 'cnf-water',
-    name: 'Still Mineral Water',
-    category: 'drinks',
-    price: 1500,
-    description: 'Chilled Kilimanjaro purified mineral drinking water.',
-    image:
-      'https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=800&q=80',
-    portionSize: '500ml Bottle',
-    prepTimeMinutes: 1,
   },
 ];

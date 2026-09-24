@@ -5,14 +5,11 @@ import { ToastContainer } from './components/ui/ToastContainer';
 import { Navbar } from './components/layout/Navbar';
 import { Footer } from './components/layout/Footer';
 import { Hero } from './components/hero/Hero';
-import { FeaturedDishes } from './components/menu/FeaturedDishes';
-import { PackagesSection } from './components/menu/PackagesSection';
+import { AtAGlanceSection } from './components/menu/AtAGlanceSection';
 import { MenuSection } from './components/menu/MenuSection';
-import { PromotionsSection } from './components/promotions/PromotionsSection';
-import { AboutSection } from './components/about/AboutSection';
+import { KisiniaSpecialSection } from './components/menu/KisiniaSpecialSection';
 import { GallerySection } from './components/gallery/GallerySection';
-import { EventsOrganizedSection } from './components/events/EventsOrganizedSection';
-import { ReservationSection } from './components/reservation/ReservationSection';
+import { AboutSection } from './components/about/AboutSection';
 import { ReviewsSection } from './components/reviews/ReviewsSection';
 import { LocationSection } from './components/location/LocationSection';
 import { SocialSection } from './components/social/SocialSection';
@@ -47,16 +44,13 @@ function MainLayout() {
       {/* Sticky Main Navigation */}
       <Navbar />
 
-      {/* Main Content Sections */}
+      {/* Main Content Sections - Streamlined & Anti-Fatigue */}
       <main className="flex-1 w-full max-w-full overflow-x-hidden">
         <Hero />
-        <PackagesSection />
-        <FeaturedDishes />
+        <AtAGlanceSection />
         <MenuSection />
-        <PromotionsSection />
-        <EventsOrganizedSection />
+        <KisiniaSpecialSection />
         <GallerySection />
-        <ReservationSection />
         <AboutSection />
         <ReviewsSection />
         <LocationSection />
@@ -66,7 +60,7 @@ function MainLayout() {
       {/* Footer */}
       <Footer />
 
-      {/* Floating WhatsApp Quick Action Button */}
+      {/* Floating Action Buttons */}
       <FloatingWhatsApp />
 
       {/* Interactive Overlays & Modals */}
