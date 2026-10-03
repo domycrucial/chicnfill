@@ -9,7 +9,19 @@ interface MenuCardProps {
 }
 
 export const MenuCard: React.FC<MenuCardProps> = ({ item }) => {
-  const { addItem, setActiveDetailItem } = useCart();
+  const { items, addItem, setActiveDetailItem, updateQuantity } = useCart();
+
+  // Check if item is already in cart
+  const cartItems = items.filter((ci) => ci.item.id === item.id);
+  const cartItemCount = cartItems.reduce((sum, ci) => sum + ci.quantity, 0);
+
+  const handleAddClick = () => {
+    if (item.availableOptions && item.availableOptions.length > 0) {
+      setActiveDetailItem(item);
+    } else {
+      addItem(item, 1);
+    }
+  };
 
   return (
     <article
@@ -43,6 +55,12 @@ export const MenuCard: React.FC<MenuCardProps> = ({ item }) => {
             </span>
           )}
         </div>
+
+        {cartItemCount > 0 && (
+          <div className="absolute top-2.5 right-2.5 bg-[#F4B41A] text-black text-[10px] font-black px-2 py-0.5 rounded-md shadow-lg border border-black/20">
+            {cartItemCount} in Cart
+          </div>
+        )}
 
         {item.prepTimeMinutes && (
           <div className="absolute bottom-2.5 right-2.5 bg-black/85 backdrop-blur-sm text-neutral-200 text-[10px] font-medium px-2 py-0.5 rounded-md border border-white/10 flex items-center gap-1 shadow-md">
@@ -94,13 +112,13 @@ export const MenuCard: React.FC<MenuCardProps> = ({ item }) => {
 
             <button
               type="button"
-              onClick={() => addItem(item, 1)}
+              onClick={handleAddClick}
               id={`btn-add-${item.id}`}
               className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#F4B41A] hover:bg-[#ffc933] text-black font-black text-xs shadow-md transition-all active:scale-95 cursor-pointer"
               aria-label={`Add ${item.name} to cart`}
             >
               <Plus className="w-3.5 h-3.5 stroke-[3]" />
-              <span>Add</span>
+              <span>{item.availableOptions && item.availableOptions.length > 0 ? 'Customize' : 'Add'}</span>
             </button>
           </div>
         </div>

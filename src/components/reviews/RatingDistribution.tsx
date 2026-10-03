@@ -20,7 +20,7 @@ export const RatingDistribution: React.FC = () => {
               <Star
                 key={s}
                 className={`w-4 h-4 ${
-                  s <= 4 ? 'fill-[#F4B400] text-[#F4B400]' : 'fill-[#F4B400]/40 text-[#F4B400]'
+                  s <= 4 ? 'fill-[#F4B41A] text-[#F4B41A]' : 'fill-[#F4B41A]/40 text-[#F4B41A]'
                 }`}
               />
             ))}
@@ -46,7 +46,7 @@ export const RatingDistribution: React.FC = () => {
 
             <div className="flex-1 h-2.5 bg-[#262626] rounded-full overflow-hidden">
               <div
-                className="h-full bg-[#F4B400] rounded-full transition-all duration-700 ease-out"
+                className="h-full bg-[#F4B41A] rounded-full transition-all duration-700 ease-out"
                 style={{ width: `${row.percentage}%` }}
               />
             </div>

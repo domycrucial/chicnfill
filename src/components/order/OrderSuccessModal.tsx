@@ -42,7 +42,7 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({
         </div>
 
         <div>
-          <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#F4B400] block mb-1">
+          <span className="text-[11px] font-extrabold uppercase tracking-widest text-[#F4B41A] block mb-1">
             Order Dispatched to WhatsApp
           </span>
           <h3 className="font-heading font-black text-2xl text-white">
@@ -58,7 +58,7 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({
         <div className="p-4 rounded-2xl bg-[#202020] border border-[#2E2E2E] text-left space-y-2 text-xs">
           <div className="flex items-center justify-between text-neutral-300">
             <span className="font-semibold text-white">Order Type:</span>
-            <span className="capitalize font-bold text-[#F4B400]">{orderDetails.orderType}</span>
+            <span className="capitalize font-bold text-[#F4B41A]">{orderDetails.orderType}</span>
           </div>
 
           {orderDetails.orderType === 'delivery' && (
@@ -78,7 +78,7 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({
           <div className="flex items-center justify-between text-neutral-300">
             <span className="text-neutral-400">Estimated Prep Time:</span>
             <span className="text-white font-semibold flex items-center gap-1">
-              <Clock className="w-3.5 h-3.5 text-[#F4B400]" /> 15–20 minutes
+              <Clock className="w-3.5 h-3.5 text-[#F4B41A]" /> 15–20 minutes
             </span>
           </div>
         </div>
@@ -89,7 +89,7 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({
             href={`tel:${restaurantConfig.phoneRaw}`}
             className="w-full py-3 px-4 rounded-xl bg-[#222222] hover:bg-[#2A2A2A] text-white border border-[#333333] text-xs font-bold flex items-center justify-center gap-2 transition-colors"
           >
-            <Phone className="w-4 h-4 text-[#F4B400]" />
+            <Phone className="w-4 h-4 text-[#F4B41A]" />
             <span>Call Restaurant ({restaurantConfig.phoneDisplay})</span>
           </a>
 
@@ -107,7 +107,7 @@ export const OrderSuccessModal: React.FC<OrderSuccessModalProps> = ({
 
           <button
             onClick={onClose}
-            className="w-full py-3 px-4 rounded-xl bg-[#F4B400] text-black text-xs font-extrabold shadow-md shadow-[#F4B400]/20 hover:bg-[#ffc933] transition-all"
+            className="w-full py-3 px-4 rounded-xl bg-[#F4B41A] text-black text-xs font-extrabold shadow-md shadow-[#F4B41A]/20 hover:bg-[#ffc933] transition-all cursor-pointer"
           >
             Back to Home
           </button>

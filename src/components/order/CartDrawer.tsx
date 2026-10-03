@@ -50,7 +50,7 @@ export const CartDrawer: React.FC = () => {
         {/* Header */}
         <div className="p-5 border-b border-[#262626] flex items-center justify-between bg-[#1A1A1A]">
           <div className="flex items-center gap-2.5">
-            <div className="w-9 h-9 rounded-xl bg-[#F4B400] flex items-center justify-center text-black font-black">
+            <div className="w-9 h-9 rounded-xl bg-[#F4B41A] flex items-center justify-center text-black font-black">
               <ShoppingBag className="w-5 h-5" />
             </div>
             <div>
@@ -73,7 +73,7 @@ export const CartDrawer: React.FC = () => {
             )}
             <button
               onClick={() => setIsCartOpen(false)}
-              className="p-1.5 rounded-lg text-neutral-400 hover:text-white bg-[#222222] transition-colors"
+              className="p-1.5 rounded-lg text-neutral-400 hover:text-white bg-[#222222] transition-colors cursor-pointer"
               aria-label="Close cart"
             >
               <X className="w-5 h-5" />
@@ -91,9 +91,9 @@ export const CartDrawer: React.FC = () => {
                 <button
                   key={opt.key}
                   onClick={() => setOrderType(opt.key)}
-                  className={`flex items-center justify-center gap-1.5 py-2 px-2 rounded-lg text-xs font-bold transition-all ${
+                  className={`flex items-center justify-center gap-1.5 py-2 px-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
                     isSelected
-                      ? 'bg-[#F4B400] text-black shadow'
+                      ? 'bg-[#F4B41A] text-black shadow'
                       : 'text-neutral-400 hover:text-white'
                   }`}
                 >
@@ -133,7 +133,7 @@ export const CartDrawer: React.FC = () => {
                   const elem = document.getElementById('menu');
                   elem?.scrollIntoView({ behavior: 'smooth' });
                 }}
-                className="px-5 py-2.5 rounded-xl bg-[#F4B400] text-black font-extrabold text-xs shadow-md shadow-[#F4B400]/20"
+                className="px-5 py-2.5 rounded-xl bg-[#F4B41A] text-black font-extrabold text-xs shadow-md shadow-[#F4B41A]/20 cursor-pointer"
               >
                 Browse Menu
               </button>
@@ -158,7 +158,7 @@ export const CartDrawer: React.FC = () => {
                       <h4 className="font-heading font-bold text-sm text-white truncate">
                         {ci.item.name}
                       </h4>
-                      <div className="text-xs font-black text-[#F4B400] mt-0.5">
+                      <div className="text-xs font-black text-[#F4B41A] mt-0.5">
                         {formatPriceTSh(ci.item.price + optionsExtra)}
                       </div>
 
@@ -181,7 +181,7 @@ export const CartDrawer: React.FC = () => {
 
                     <button
                       onClick={() => removeItem(ci.cartItemId)}
-                      className="text-neutral-500 hover:text-rose-400 p-1"
+                      className="text-neutral-500 hover:text-rose-400 p-1 cursor-pointer"
                       aria-label="Remove item"
                     >
                       <Trash2 className="w-4 h-4" />
@@ -193,7 +193,7 @@ export const CartDrawer: React.FC = () => {
                     <div className="flex items-center bg-[#222222] border border-[#333333] rounded-lg p-0.5">
                       <button
                         onClick={() => updateQuantity(ci.cartItemId, -1)}
-                        className="w-6 h-6 flex items-center justify-center text-neutral-400 hover:text-white"
+                        className="w-6 h-6 flex items-center justify-center text-neutral-400 hover:text-white cursor-pointer"
                         aria-label="Decrease quantity"
                       >
                         <Minus className="w-3 h-3" />
@@ -203,7 +203,7 @@ export const CartDrawer: React.FC = () => {
                       </span>
                       <button
                         onClick={() => updateQuantity(ci.cartItemId, 1)}
-                        className="w-6 h-6 flex items-center justify-center text-neutral-400 hover:text-white"
+                        className="w-6 h-6 flex items-center justify-center text-neutral-400 hover:text-white cursor-pointer"
                         aria-label="Increase quantity"
                       >
                         <Plus className="w-3 h-3" />
@@ -242,7 +242,7 @@ export const CartDrawer: React.FC = () => {
               </div>
               <div className="pt-2 border-t border-[#282828] flex justify-between text-base font-black text-white">
                 <span>Total Estimated</span>
-                <span className="text-[#F4B400] text-lg font-heading">{formatPriceTSh(subtotal)}</span>
+                <span className="text-[#F4B41A] text-lg font-heading">{formatPriceTSh(subtotal)}</span>
               </div>
             </div>
 
@@ -252,7 +252,7 @@ export const CartDrawer: React.FC = () => {
                 setIsCheckoutOpen(true);
               }}
               id="proceed-to-checkout-btn"
-              className="w-full py-4 px-5 rounded-xl bg-[#F4B400] hover:bg-[#ffc933] text-black font-extrabold text-sm flex items-center justify-between shadow-xl shadow-[#F4B400]/20 active:scale-[0.98] transition-all"
+              className="w-full py-4 px-5 rounded-xl bg-[#F4B41A] hover:bg-[#ffc933] text-black font-extrabold text-sm flex items-center justify-between shadow-xl shadow-[#F4B41A]/20 active:scale-[0.98] transition-all cursor-pointer"
             >
               <span>Proceed to Checkout</span>
               <ArrowRight className="w-4 h-4 text-black stroke-[3]" />

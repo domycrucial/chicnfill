@@ -8,6 +8,9 @@ import { Hero } from './components/hero/Hero';
 import { AtAGlanceSection } from './components/menu/AtAGlanceSection';
 import { MenuSection } from './components/menu/MenuSection';
 import { KisiniaSpecialSection } from './components/menu/KisiniaSpecialSection';
+import { PackagesSection } from './components/menu/PackagesSection';
+import { ReservationSection } from './components/reservation/ReservationSection';
+import { EventsOrganizedSection } from './components/events/EventsOrganizedSection';
 import { GallerySection } from './components/gallery/GallerySection';
 import { AboutSection } from './components/about/AboutSection';
 import { ReviewsSection } from './components/reviews/ReviewsSection';
@@ -49,6 +52,9 @@ function MainLayout() {
         <AtAGlanceSection />
         <MenuSection />
         <KisiniaSpecialSection />
+        <PackagesSection />
+        <ReservationSection />
+        <EventsOrganizedSection />
         <GallerySection />
         <AboutSection />
         <ReviewsSection />

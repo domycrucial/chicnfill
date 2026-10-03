@@ -14,6 +14,8 @@ import {
 } from 'lucide-react';
 import { getDirectionsUrl } from '../../utils/formatters';
 
+import { AnnouncementBar } from './AnnouncementBar';
+
 interface NavbarProps {
   activeSection?: string;
 }
@@ -33,15 +35,18 @@ export const Navbar: React.FC<NavbarProps> = () => {
 
   const navLinks = [
     { label: 'Home', href: '#home' },
-    { label: 'At a Glance', href: '#at-a-glance' },
+    { label: 'Highlights', href: '#at-a-glance' },
     { label: 'Menu', href: '#menu' },
     { label: 'Kisinia Feast', href: '#kisinia' },
+    { label: 'Packages', href: '#packages' },
+    { label: 'Reserve Table', href: '#reserve' },
     { label: 'Gallery', href: '#gallery' },
     { label: 'Location', href: '#location' },
   ];
 
   return (
     <>
+      <AnnouncementBar />
       <header
         id="main-navbar"
         className={`sticky top-0 z-40 transition-all duration-300 ${

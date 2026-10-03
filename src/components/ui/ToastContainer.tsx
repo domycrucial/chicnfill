@@ -24,7 +24,7 @@ export const ToastContainer: React.FC = () => {
             ) : toast.type === 'warning' ? (
               <AlertTriangle className="w-5 h-5 text-amber-400" />
             ) : (
-              <CheckCircle2 className="w-5 h-5 text-[#F4B400]" />
+              <CheckCircle2 className="w-5 h-5 text-[#F4B41A]" />
             )}
           </div>
           <div className="flex-1 text-sm">

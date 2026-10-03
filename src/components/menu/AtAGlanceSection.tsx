@@ -41,7 +41,7 @@ export const AtAGlanceSection: React.FC = () => {
       setActiveDetailItem(item);
     } else {
       addItem(item, 1, []);
-      showToast(`Added ${item.name} to order!`, 'success');
+      showToast('Added to order', item.name, 'success');
     }
   };
 

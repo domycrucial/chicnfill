@@ -49,11 +49,11 @@ export const FoodDetailModal: React.FC = () => {
       aria-modal="true"
       aria-labelledby="modal-food-title"
     >
-      <div className="relative w-full max-w-lg bg-[#181818] border border-[#333333] rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90vh]">
+      <div className="relative w-full max-w-lg bg-[#181818] border border-[#333333] rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[90dvh]">
         {/* Close Button */}
         <button
           onClick={() => setActiveDetailItem(null)}
-          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/60 hover:bg-black text-white backdrop-blur-md transition-colors border border-white/10"
+          className="absolute top-4 right-4 z-10 p-2 rounded-full bg-black/60 hover:bg-black text-white backdrop-blur-md transition-colors border border-white/10 cursor-pointer"
           aria-label="Close food details modal"
         >
           <X className="w-5 h-5" />
@@ -99,7 +99,7 @@ export const FoodDetailModal: React.FC = () => {
               <h2 id="modal-food-title" className="font-heading font-black text-2xl text-white">
                 {activeDetailItem.name}
               </h2>
-              <span className="font-heading font-black text-xl text-[#F4B400] shrink-0">
+              <span className="font-heading font-black text-xl text-[#F4B41A] shrink-0">
                 {formatPriceTSh(itemUnitPrice)}
               </span>
             </div>
@@ -110,7 +110,7 @@ export const FoodDetailModal: React.FC = () => {
 
             {activeDetailItem.prepTimeMinutes && (
               <div className="flex items-center gap-2 text-xs text-neutral-400 mt-3">
-                <Clock className="w-3.5 h-3.5 text-[#F4B400]" />
+                <Clock className="w-3.5 h-3.5 text-[#F4B41A]" />
                 <span>Estimated kitchen prep time: ~{activeDetailItem.prepTimeMinutes} minutes</span>
               </div>
             )}
@@ -132,16 +132,16 @@ export const FoodDetailModal: React.FC = () => {
                           type="button"
                           key={choice.label}
                           onClick={() => handleOptionChange(optGroup.name, choice.label, choice.extraPrice || 0)}
-                          className={`flex items-center justify-between p-3 rounded-xl text-xs font-semibold border transition-all text-left ${
+                          className={`flex items-center justify-between p-3 rounded-xl text-xs font-semibold border transition-all text-left cursor-pointer ${
                             selected
-                              ? 'bg-[#F4B400]/10 border-[#F4B400] text-white'
+                              ? 'bg-[#F4B41A]/10 border-[#F4B41A] text-white'
                               : 'bg-[#222222] border-[#333333] text-neutral-300 hover:border-neutral-500'
                           }`}
                         >
                           <div className="flex items-center gap-2">
                             <div
                               className={`w-4 h-4 rounded-full flex items-center justify-center border ${
-                                selected ? 'bg-[#F4B400] border-[#F4B400]' : 'border-neutral-500'
+                                selected ? 'bg-[#F4B41A] border-[#F4B41A]' : 'border-neutral-500'
                               }`}
                             >
                               {selected && <Check className="w-3 h-3 text-black stroke-[3]" />}
@@ -149,7 +149,7 @@ export const FoodDetailModal: React.FC = () => {
                             <span>{choice.label}</span>
                           </div>
                           {choice.extraPrice ? (
-                            <span className="text-[#F4B400] font-bold">
+                            <span className="text-[#F4B41A] font-bold">
                               +{formatPriceTSh(choice.extraPrice)}
                             </span>
                           ) : (
@@ -175,7 +175,7 @@ export const FoodDetailModal: React.FC = () => {
               value={specialNotes}
               onChange={(e) => setSpecialNotes(e.target.value)}
               placeholder="e.g., Sauce on the side, extra crispy, less salt..."
-              className="w-full px-4 py-2.5 rounded-xl bg-[#222222] border border-[#333333] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B400]"
+              className="w-full px-4 py-2.5 rounded-xl bg-[#222222] border border-[#333333] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B41A]"
             />
           </div>
         </div>
@@ -185,7 +185,7 @@ export const FoodDetailModal: React.FC = () => {
           <div className="flex items-center bg-[#222222] border border-[#333333] rounded-xl p-1">
             <button
               onClick={() => setQuantity((q) => Math.max(1, q - 1))}
-              className="w-9 h-9 flex items-center justify-center text-neutral-300 hover:text-white rounded-lg hover:bg-white/5 active:scale-90 transition-all"
+              className="w-9 h-9 flex items-center justify-center text-neutral-300 hover:text-white rounded-lg hover:bg-white/5 active:scale-90 transition-all cursor-pointer"
               aria-label="Decrease quantity"
             >
               <Minus className="w-4 h-4" />
@@ -195,7 +195,7 @@ export const FoodDetailModal: React.FC = () => {
             </span>
             <button
               onClick={() => setQuantity((q) => q + 1)}
-              className="w-9 h-9 flex items-center justify-center text-neutral-300 hover:text-white rounded-lg hover:bg-white/5 active:scale-90 transition-all"
+              className="w-9 h-9 flex items-center justify-center text-neutral-300 hover:text-white rounded-lg hover:bg-white/5 active:scale-90 transition-all cursor-pointer"
               aria-label="Increase quantity"
             >
               <Plus className="w-4 h-4" />
@@ -205,7 +205,7 @@ export const FoodDetailModal: React.FC = () => {
           <button
             onClick={handleAddToCart}
             id="modal-add-to-cart-btn"
-            className="flex-1 py-3.5 px-5 rounded-xl bg-[#F4B400] hover:bg-[#ffc933] text-black font-extrabold text-sm sm:text-base flex items-center justify-between shadow-lg shadow-[#F4B400]/20 active:scale-[0.98] transition-all"
+            className="flex-1 py-3.5 px-5 rounded-xl bg-[#F4B41A] hover:bg-[#ffc933] text-black font-extrabold text-sm sm:text-base flex items-center justify-between shadow-lg shadow-[#F4B41A]/20 active:scale-[0.98] transition-all cursor-pointer"
           >
             <span>Add to Order</span>
             <span className="font-black">{formatPriceTSh(itemFinalTotal)}</span>

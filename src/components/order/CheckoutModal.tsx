@@ -95,19 +95,30 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
     }, 400);
   };
 
+  const ARUSHA_AREAS = [
+    'Pangani St / CBD',
+    'Clock Tower',
+    'Sanawari',
+    'Sakina',
+    'Njiro',
+    'Kijenge',
+    'Majengo',
+    'Kaloleni',
+  ];
+
   return (
     <div
       id="checkout-modal"
-      className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200"
+      className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-4 bg-black/80 backdrop-blur-sm animate-in fade-in duration-200"
       role="dialog"
       aria-modal="true"
       aria-labelledby="checkout-modal-title"
     >
-      <div className="relative w-full max-w-xl bg-[#181818] border border-[#333333] rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92vh]">
+      <div className="relative w-full max-w-xl bg-[#181818] border border-[#333333] rounded-3xl shadow-2xl overflow-hidden flex flex-col max-h-[92dvh] sm:max-h-[90vh]">
         {/* Header */}
-        <div className="p-5 border-b border-[#262626] bg-[#1C1C1C] flex items-center justify-between">
+        <div className="p-4 sm:p-5 border-b border-[#262626] bg-[#1C1C1C] flex items-center justify-between">
           <div>
-            <h2 id="checkout-modal-title" className="font-heading font-black text-xl text-white">
+            <h2 id="checkout-modal-title" className="font-heading font-black text-lg sm:text-xl text-white">
               Complete Your Order
             </h2>
             <p className="text-xs text-neutral-400 mt-0.5">
@@ -116,7 +127,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
           </div>
           <button
             onClick={() => setIsCheckoutOpen(false)}
-            className="p-1.5 rounded-lg text-neutral-400 hover:text-white bg-[#262626]"
+            className="p-1.5 rounded-lg text-neutral-400 hover:text-white bg-[#262626] cursor-pointer"
             aria-label="Close checkout"
           >
             <X className="w-5 h-5" />
@@ -124,7 +135,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
         </div>
 
         {/* Scrollable Form Body */}
-        <form onSubmit={handleSubmitWhatsApp} className="p-6 overflow-y-auto space-y-6 flex-1">
+        <form onSubmit={handleSubmitWhatsApp} className="p-4 sm:p-6 overflow-y-auto space-y-5 sm:space-y-6 flex-1">
           {/* Order Type Toggle */}
           <div className="space-y-2">
             <label className="text-xs font-bold uppercase tracking-wider text-neutral-400 block">
@@ -143,13 +154,13 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
                     type="button"
                     key={opt.type}
                     onClick={() => setOrderType(opt.type)}
-                    className={`p-3 rounded-xl border text-center transition-all flex flex-col items-center gap-1.5 ${
+                    className={`p-3 rounded-xl border text-center transition-all flex flex-col items-center gap-1.5 cursor-pointer ${
                       active
-                        ? 'bg-[#F4B400]/15 border-[#F4B400] text-white'
+                        ? 'bg-[#F4B41A]/15 border-[#F4B41A] text-white shadow-sm'
                         : 'bg-[#222222] border-[#333333] text-neutral-400 hover:border-neutral-500'
                     }`}
                   >
-                    <Icon className={`w-5 h-5 ${active ? 'text-[#F4B400]' : 'text-neutral-400'}`} />
+                    <Icon className={`w-5 h-5 ${active ? 'text-[#F4B41A]' : 'text-neutral-400'}`} />
                     <span className="text-xs font-bold text-white">{opt.label}</span>
                     <span className="text-[10px] text-neutral-400">{opt.desc}</span>
                   </button>
@@ -174,7 +185,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
                   value={customerName}
                   onChange={(e) => setCustomerName(e.target.value)}
                   placeholder="e.g., Baraka Mushi"
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#222222] border border-[#333333] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B400]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#222222] border border-[#333333] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B41A]"
                 />
                 {errors.customerName && (
                   <p className="text-[11px] text-rose-400 mt-1 flex items-center gap-1">
@@ -194,7 +205,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
                   value={phone}
                   onChange={(e) => setPhone(e.target.value)}
                   placeholder="e.g., 0745 138 774"
-                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#222222] border border-[#333333] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B400]"
+                  className="w-full px-3.5 py-2.5 rounded-xl bg-[#222222] border border-[#333333] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B41A]"
                 />
                 {errors.phone && (
                   <p className="text-[11px] text-rose-400 mt-1 flex items-center gap-1">
@@ -209,10 +220,34 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
           {/* Specific Order Type Fields */}
           {orderType === 'delivery' && (
             <div className="space-y-3 pt-4 border-t border-[#262626] bg-[#1D1D1D] p-4 rounded-2xl border border-[#2E2E2E]">
-              <div className="flex items-center gap-2 text-xs font-bold text-[#F4B400]">
+              <div className="flex items-center gap-2 text-xs font-bold text-[#F4B41A]">
                 <MapPin className="w-4 h-4" />
                 <span>Arusha Delivery Address</span>
               </div>
+
+              {/* Quick Area Selection Pills */}
+              <div>
+                <span className="text-[10px] uppercase font-bold text-neutral-400 block mb-1.5">
+                  Popular Arusha Areas (Tap to fill):
+                </span>
+                <div className="flex flex-wrap gap-1.5">
+                  {ARUSHA_AREAS.map((area) => (
+                    <button
+                      type="button"
+                      key={area}
+                      onClick={() => setDeliveryAddress(area)}
+                      className={`text-[11px] px-2.5 py-1 rounded-lg border transition-all cursor-pointer ${
+                        deliveryAddress.includes(area)
+                          ? 'bg-[#F4B41A] text-black font-bold border-[#F4B41A]'
+                          : 'bg-[#252525] text-neutral-300 border-[#383838] hover:border-neutral-500'
+                      }`}
+                    >
+                      {area}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
               <div>
                 <label className="text-xs text-neutral-300 font-medium block mb-1">
                   Street / Area in Arusha <span className="text-rose-400">*</span>
@@ -223,7 +258,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
                   value={deliveryAddress}
                   onChange={(e) => setDeliveryAddress(e.target.value)}
                   placeholder="e.g., Pangani St, Clock Tower Area, Sakina, Njiro, Kaloleni"
-                  className="w-full px-3.5 py-2 rounded-xl bg-[#252525] border border-[#3A3A3A] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B400]"
+                  className="w-full px-3.5 py-2 rounded-xl bg-[#252525] border border-[#3A3A3A] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B41A]"
                 />
                 {errors.deliveryAddress && (
                   <p className="text-[11px] text-rose-400 mt-1 flex items-center gap-1">
@@ -242,7 +277,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
                   value={deliveryLandmark}
                   onChange={(e) => setDeliveryLandmark(e.target.value)}
                   placeholder="e.g., Near Arusha Hotel / Opposite Bank branch / Blue gate"
-                  className="w-full px-3.5 py-2 rounded-xl bg-[#252525] border border-[#3A3A3A] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B400]"
+                  className="w-full px-3.5 py-2 rounded-xl bg-[#252525] border border-[#3A3A3A] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B41A]"
                 />
               </div>
             </div>
@@ -250,7 +285,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
 
           {orderType === 'pickup' && (
             <div className="p-4 rounded-2xl bg-[#1E1E1E] border border-[#2E2E2E] space-y-2">
-              <div className="flex items-center gap-2 text-xs font-bold text-[#F4B400]">
+              <div className="flex items-center gap-2 text-xs font-bold text-[#F4B41A]">
                 <MapPin className="w-4 h-4" />
                 <span>Pickup Location</span>
               </div>
@@ -275,7 +310,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
 
           {orderType === 'dine-in' && (
             <div className="p-4 rounded-2xl bg-[#1E1E1E] border border-[#2E2E2E] space-y-3">
-              <div className="flex items-center gap-2 text-xs font-bold text-[#F4B400]">
+              <div className="flex items-center gap-2 text-xs font-bold text-[#F4B41A]">
                 <Utensils className="w-4 h-4" />
                 <span>Dine-In Table Seating</span>
               </div>
@@ -288,7 +323,7 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
                   value={tableNumber}
                   onChange={(e) => setTableNumber(e.target.value)}
                   placeholder="e.g., Table 4 or 'Walking in now'"
-                  className="w-full px-3.5 py-2 rounded-xl bg-[#252525] border border-[#3A3A3A] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B400]"
+                  className="w-full px-3.5 py-2 rounded-xl bg-[#252525] border border-[#3A3A3A] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B41A]"
                 />
               </div>
             </div>
@@ -312,13 +347,13 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
                     type="button"
                     key={m.id}
                     onClick={() => setPaymentMethod(m.id)}
-                    className={`p-3 rounded-xl border text-left flex flex-col justify-between gap-1 transition-all ${
+                    className={`p-3 rounded-xl border text-left flex flex-col justify-between gap-1 transition-all cursor-pointer ${
                       selected
-                        ? 'bg-[#F4B400]/10 border-[#F4B400] text-white'
+                        ? 'bg-[#F4B41A]/10 border-[#F4B41A] text-white shadow-sm'
                         : 'bg-[#222222] border-[#333333] text-neutral-400 hover:border-neutral-500'
                     }`}
                   >
-                    <Icon className={`w-4 h-4 ${selected ? 'text-[#F4B400]' : 'text-neutral-400'}`} />
+                    <Icon className={`w-4 h-4 ${selected ? 'text-[#F4B41A]' : 'text-neutral-400'}`} />
                     <span className="text-xs font-bold text-white leading-tight">{m.label}</span>
                     <span className="text-[10px] text-neutral-400">{m.sub}</span>
                   </button>
@@ -340,16 +375,16 @@ export const CheckoutModal: React.FC<CheckoutModalProps> = ({ onOrderSuccess }) 
               value={orderNotes}
               onChange={(e) => setOrderNotes(e.target.value)}
               placeholder="e.g., Extra napkins, call when rider arrives at the gate..."
-              className="w-full px-3.5 py-2 rounded-xl bg-[#222222] border border-[#333333] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B400]"
+              className="w-full px-3.5 py-2 rounded-xl bg-[#222222] border border-[#333333] text-sm text-white placeholder:text-neutral-500 focus:outline-none focus:border-[#F4B41A]"
             />
           </div>
         </form>
 
         {/* Modal Footer with Actions */}
-        <div className="p-5 bg-[#141414] border-t border-[#282828] flex flex-col sm:flex-row items-center justify-between gap-3">
+        <div className="p-4 sm:p-5 bg-[#141414] border-t border-[#282828] flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="text-left w-full sm:w-auto">
             <span className="text-xs text-neutral-400 block">Total to Pay:</span>
-            <span className="font-heading font-black text-xl text-[#F4B400]">
+            <span className="font-heading font-black text-xl text-[#F4B41A]">
               {formatPriceTSh(subtotal)}
             </span>
           </div>

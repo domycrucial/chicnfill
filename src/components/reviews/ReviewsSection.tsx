@@ -11,7 +11,7 @@ export const ReviewsSection: React.FC = () => {
         
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-12">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F4B400]/15 text-[#F4B400] text-xs font-bold uppercase tracking-wider mb-2">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F4B41A]/15 text-[#F4B41A] text-xs font-bold uppercase tracking-wider mb-2">
             <MessageSquareQuote className="w-3.5 h-3.5" />
             <span>Social Proof & Sentiment</span>
           </div>
@@ -37,7 +37,7 @@ export const ReviewsSection: React.FC = () => {
               <article
                 key={review.id}
                 id={`review-card-${review.id}`}
-                className="p-5 sm:p-6 rounded-2xl bg-[#1A1A1A] border border-[#2B2B2B] hover:border-[#F4B400]/40 transition-colors space-y-3"
+                className="p-5 sm:p-6 rounded-2xl bg-[#1A1A1A] border border-[#2B2B2B] hover:border-[#F4B41A]/40 transition-colors space-y-3"
               >
                 <div className="flex items-center justify-between gap-2">
                   <div className="flex items-center gap-1">
@@ -46,7 +46,7 @@ export const ReviewsSection: React.FC = () => {
                         key={s}
                         className={`w-4 h-4 ${
                           s <= review.rating
-                            ? 'fill-[#F4B400] text-[#F4B400]'
+                            ? 'fill-[#F4B41A] text-[#F4B41A]'
                             : 'fill-neutral-700 text-neutral-700'
                         }`}
                       />
@@ -62,7 +62,7 @@ export const ReviewsSection: React.FC = () => {
 
                 <div className="pt-3 border-t border-[#262626] flex items-center justify-between text-xs">
                   <div className="flex items-center gap-2">
-                    <div className="w-6 h-6 rounded-full bg-[#F4B400] text-black font-black text-xs flex items-center justify-center">
+                    <div className="w-6 h-6 rounded-full bg-[#F4B41A] text-black font-black text-xs flex items-center justify-center">
                       {review.author.charAt(0)}
                     </div>
                     <span className="font-bold text-white">{review.author}</span>
@@ -74,7 +74,7 @@ export const ReviewsSection: React.FC = () => {
                   </div>
 
                   {review.highlightedItem && (
-                    <span className="hidden sm:inline-block px-2 py-0.5 rounded-md bg-[#242424] text-[10px] font-semibold text-[#F4B400]">
+                    <span className="hidden sm:inline-block px-2 py-0.5 rounded-md bg-[#242424] text-[10px] font-semibold text-[#F4B41A]">
                       {review.highlightedItem}
                     </span>
                   )}

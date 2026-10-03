@@ -9,7 +9,10 @@ export const PackagesSection: React.FC = () => {
   const { addItem, setActiveDetailItem } = useCart();
   const { showToast } = useToast();
 
-  const packages = menuItems.filter((item) => item.category === 'packages');
+  const packageIds = ['cnf-kisinia-watu-6', 'cnf-family-chicken', 'cnf-sandwich-big', 'cnf-drumstick-10'];
+  const packages = packageIds
+    .map((id) => menuItems.find((i) => i.id === id))
+    .filter((i): i is typeof menuItems[0] => Boolean(i));
 
   const handleQuickAdd = (pkg: typeof menuItems[0]) => {
     // If it has available options (glaze/drinks), open the detail modal to customize
@@ -17,7 +20,7 @@ export const PackagesSection: React.FC = () => {
       setActiveDetailItem(pkg);
     } else {
       addItem(pkg, 1, []);
-      showToast(`Added ${pkg.name} to order!`, 'success');
+      showToast('Added to order', pkg.name, 'success');
     }
   };
 

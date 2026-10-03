@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import { getQuickWhatsAppChatUrl } from '../../utils/formatters';
+import { useCart } from '../../context/CartContext';
 import { MessageCircle, X, ArrowUp } from 'lucide-react';
 
 export const FloatingWhatsApp: React.FC = () => {
+  const { isCartOpen, isCheckoutOpen, activeDetailItem } = useCart();
   const [showTooltip, setShowTooltip] = useState(true);
   const [showScrollTop, setShowScrollTop] = useState(false);
 
@@ -21,6 +23,10 @@ export const FloatingWhatsApp: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
+
+  const isOverlayOpen = isCartOpen || isCheckoutOpen || Boolean(activeDetailItem);
+
+  if (isOverlayOpen) return null;
 
   return (
     <div

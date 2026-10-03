@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { restaurantConfig } from '../../data/restaurant';
 import { getDirectionsUrl } from '../../utils/formatters';
+import { getLiveRestaurantStatus } from '../../utils/openingHours';
 import { 
   MapPin, 
   Navigation, 
@@ -22,6 +23,7 @@ import {
 export const LocationSection: React.FC = () => {
   const [mapType, setMapType] = useState<'roadmap' | 'satellite'>('roadmap');
   const [copied, setCopied] = useState(false);
+  const liveStatus = getLiveRestaurantStatus();
 
   // Google Maps embed URL centered precisely on Pangani St, Arusha CBD
   const googleMapSrc = mapType === 'satellite'
@@ -84,9 +86,13 @@ export const LocationSection: React.FC = () => {
                     <Compass className="w-3.5 h-3.5 text-[#F4B41A]" />
                     <span>Plus Code: <strong>{restaurantConfig.plusCode}</strong></span>
                   </div>
-                  <div className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-xs font-bold text-emerald-400">
-                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-                    <span>Open Now until 9:30 PM</span>
+                  <div className={`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl border text-xs font-bold ${
+                    liveStatus.isOpen
+                      ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400'
+                      : 'bg-rose-500/10 border-rose-500/30 text-rose-400'
+                  }`}>
+                    <span className={`w-2 h-2 rounded-full ${liveStatus.isOpen ? 'bg-emerald-400 animate-ping' : 'bg-rose-400'}`} />
+                    <span>{liveStatus.statusText} • {liveStatus.subText}</span>
                   </div>
                 </div>
               </div>

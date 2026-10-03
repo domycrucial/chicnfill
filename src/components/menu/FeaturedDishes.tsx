@@ -21,7 +21,7 @@ export const FeaturedDishes: React.FC = () => {
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-10 gap-4">
           <div>
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F4B400]/15 text-[#F4B400] text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#F4B41A]/15 text-[#F4B41A] text-xs font-bold uppercase tracking-wider mb-2">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Customer Recommendations</span>
             </div>
@@ -35,7 +35,7 @@ export const FeaturedDishes: React.FC = () => {
 
           <a
             href="#menu"
-            className="inline-flex items-center gap-2 text-sm font-bold text-[#F4B400] hover:text-[#ffca36] transition-colors group"
+            className="inline-flex items-center gap-2 text-sm font-bold text-[#F4B41A] hover:text-[#ffca36] transition-colors group"
           >
             <span>Browse All Menu Items</span>
             <span className="transform group-hover:translate-x-1 transition-transform">→</span>
@@ -48,7 +48,7 @@ export const FeaturedDishes: React.FC = () => {
             <article
               key={dish.id}
               id={`featured-dish-${dish.id}`}
-              className="group flex flex-col bg-[#1A1A1A] rounded-2xl overflow-hidden border border-[#2B2B2B] hover:border-[#F4B400]/50 hover:shadow-xl hover:shadow-black/60 transition-all duration-300 transform hover:-translate-y-1"
+              className="group flex flex-col bg-[#1A1A1A] rounded-2xl overflow-hidden border border-[#2B2B2B] hover:border-[#F4B41A]/50 hover:shadow-xl hover:shadow-black/60 transition-all duration-300 transform hover:-translate-y-1"
             >
               {/* Image Container with Zoom and Badges */}
               <div className="relative aspect-4/3 overflow-hidden bg-[#111111]">
@@ -60,7 +60,7 @@ export const FeaturedDishes: React.FC = () => {
                 />
                 
                 {/* Popular badge */}
-                <div className="absolute top-3 left-3 flex items-center gap-1 bg-[#F4B400] text-black text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-lg shadow-md">
+                <div className="absolute top-3 left-3 flex items-center gap-1 bg-[#F4B41A] text-black text-[10px] font-black uppercase tracking-wider px-2.5 py-1 rounded-lg shadow-md">
                   <Star className="w-3 h-3 fill-black text-black" />
                   <span>Top Choice</span>
                 </div>
@@ -68,7 +68,7 @@ export const FeaturedDishes: React.FC = () => {
                 {/* Prep time badge */}
                 {dish.prepTimeMinutes && (
                   <div className="absolute top-3 right-3 flex items-center gap-1 bg-black/75 backdrop-blur-sm text-neutral-300 text-[10px] font-semibold px-2 py-1 rounded-lg border border-white/10">
-                    <Clock className="w-3 h-3 text-[#F4B400]" />
+                    <Clock className="w-3 h-3 text-[#F4B41A]" />
                     <span>~{dish.prepTimeMinutes}m</span>
                   </div>
                 )}
@@ -80,7 +80,7 @@ export const FeaturedDishes: React.FC = () => {
                   aria-label={`Quick view ${dish.name}`}
                 >
                   <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-black/80 text-white text-xs font-semibold backdrop-blur-md border border-white/20 hover:scale-105 transition-transform">
-                    <Eye className="w-4 h-4 text-[#F4B400]" />
+                    <Eye className="w-4 h-4 text-[#F4B41A]" />
                     <span>Quick View</span>
                   </span>
                 </button>
@@ -89,7 +89,7 @@ export const FeaturedDishes: React.FC = () => {
               {/* Card Body */}
               <div className="flex flex-col flex-1 p-5">
                 <div className="flex items-start justify-between gap-2 mb-1.5">
-                  <h3 className="font-heading font-extrabold text-lg text-white group-hover:text-[#F4B400] transition-colors leading-snug">
+                  <h3 className="font-heading font-extrabold text-lg text-white group-hover:text-[#F4B41A] transition-colors leading-snug">
                     {dish.name}
                   </h3>
                 </div>
@@ -104,7 +104,7 @@ export const FeaturedDishes: React.FC = () => {
                     <span className="text-[10px] uppercase tracking-wider text-neutral-400 font-semibold block">
                       Price
                     </span>
-                    <span className="font-heading font-black text-lg text-[#F4B400]">
+                    <span className="font-heading font-black text-lg text-[#F4B41A]">
                       {formatPriceTSh(dish.price)}
                     </span>
                   </div>
@@ -112,7 +112,7 @@ export const FeaturedDishes: React.FC = () => {
                   <div className="flex items-center gap-1.5">
                     <button
                       onClick={() => setActiveDetailItem(dish)}
-                      className="p-2 rounded-xl text-neutral-400 hover:text-white hover:bg-[#252525] border border-[#333333] transition-colors"
+                      className="p-2 rounded-xl text-neutral-400 hover:text-white hover:bg-[#252525] border border-[#333333] transition-colors cursor-pointer"
                       title="View Details"
                       aria-label={`View details of ${dish.name}`}
                     >
@@ -121,7 +121,7 @@ export const FeaturedDishes: React.FC = () => {
                     <button
                       onClick={() => addItem(dish, 1)}
                       id={`add-featured-${dish.id}`}
-                      className="inline-flex items-center gap-1 px-3.5 py-2 rounded-xl bg-[#F4B400] hover:bg-[#ffc933] text-black font-extrabold text-xs shadow-md shadow-[#F4B400]/20 active:scale-95 transition-all"
+                      className="inline-flex items-center gap-1 px-3.5 py-2 rounded-xl bg-[#F4B41A] hover:bg-[#ffc933] text-black font-extrabold text-xs shadow-md shadow-[#F4B41A]/20 active:scale-95 transition-all cursor-pointer"
                       aria-label={`Add ${dish.name} to order`}
                     >
                       <Plus className="w-3.5 h-3.5 stroke-[3]" />
